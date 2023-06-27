@@ -46,9 +46,9 @@ const TourPackageList = () => {
       price: 400,
       rating: "2",
     },
-    {
-      isImage: true,
-    },
+    // {
+    //   isImage: true,
+    // },
   ];
   return (
     <div>
