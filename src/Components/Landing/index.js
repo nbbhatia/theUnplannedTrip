@@ -3,7 +3,10 @@ import { Button } from "../../Assets/lib/mui";
 import Image from 'next/image';
 import BGImage from '../../Assets/images/BG.jpg'
 import TourPackagesList from "../TourPackagesList";
-import PopularPackages from "../PopularPackages"
+import PopularPackages from "../PopularPackages";
+import WhyTour from "../WhyTour";
+import BestPackages from "../BestPackages"
+import Footer from "../Reusable/Footer";
 
 const Landing = () => {
   return (
@@ -18,6 +21,9 @@ const Landing = () => {
       />
       <TourPackagesList/>
       <PopularPackages/>
+      <WhyTour/>
+      <BestPackages/>
+      <Footer/>
     </div>
   );
 };
