@@ -1,19 +1,24 @@
-import * as React from 'react';
-import Image from 'next/image';
-import BGImage from '../../../Assets/images/BG.jpg'
-import {Card,CardActions,CardContent,CardMedia,Typography,Button} from '../../../Assets/lib/mui';
+import BGImage from "../../Assets/images/BG.jpg";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+} from "../../Assets/lib/mui";
+import Image from "next/image";
 
-export default function MediaCard() {
+const PackageList = () => {
   return (
-    <Card >
-         <Image
-            src={BGImage}
-            alt="Vercel Logo"
-             
-            style={{height:'140',width:'100%'}}
-            // priority
-          /> 
-      
+    <Card>
+      <Image
+        src={BGImage}
+        alt="Vercel Logo"
+        style={{ height: "140", width: "100%" }}
+        // priority
+      />
+
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
@@ -29,4 +34,6 @@ export default function MediaCard() {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default PackageList;
