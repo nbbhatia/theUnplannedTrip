@@ -1,50 +1,107 @@
 import React from "react";
-import PackagesList from "./PackagesList";
+import PackagesList from "../Reusable/PackageList";
 import { Grid } from "../../Assets/lib/mui";
 import Image from "next/image";
 import BGImage from "../../Assets/images/BG.jpg";
+import PackageImage1 from "../../Assets/images/p-1.png";
+import PackageImage2 from "../../Assets/images/p-2.png";
+import PackageImage3 from "../../Assets/images/p-3.png";
+import PackageImage4 from "../../Assets/images/p-4.png";
+import PackageImage5 from "../../Assets/images/p-5.png";
+import PackageImage6 from "../../Assets/images/p-6.png";
+import { ContentSection } from "../Reusable/Content_Section";
 const TourPackageList = () => {
+  // let list_of__popular_packages = [
+  //   {
+  //     isImage: true,
+  //   },
+  //   {
+  //     destinationName: "1",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+  //   {
+  //     destinationName: "2",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+
+  //   // {
+  //   //   destinationName: "abc",
+  //   //   price: 400,
+  //   //   rating: "2",
+  //   // },
+
+  //   {
+  //     destinationName: "3",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+
+  //   {
+  //     destinationName: "4",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+  //   {
+  //     destinationName: "5",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+  //   {
+  //     destinationName: "6",
+  //     price: 400,
+  //     rating: "2",
+  //   },
+  //   {
+  //     isImage: true,
+  //   },
+  // ];
   let list_of__popular_packages = [
     {
       isImage: true,
     },
     {
-      destinationName: "1",
-      price: 400,
-      rating: "2",
+      price: 200,
+      name: "Nainital",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage1,
     },
     {
-      destinationName: "2",
-      price: 400,
-      rating: "2",
-    },
-
-    // {
-    //   destinationName: "abc",
-    //   price: 400,
-    //   rating: "2",
-    // },
-
-    {
-      destinationName: "3",
-      price: 400,
-      rating: "2",
-    },
-  
-    {
-      destinationName: "4",
-      price: 400,
-      rating: "2",
+      price: 200,
+      name: "Shimla",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage2,
     },
     {
-      destinationName: "5",
-      price: 400,
-      rating: "2",
+      price: 200,
+      name: "Massorie",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage3,
     },
     {
-      destinationName: "6",
-      price: 400,
-      rating: "2",
+      price: 200,
+      name: "Auli",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage4,
+    },
+    {
+      price: 200,
+      name: "Rishikesh",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage5,
+    },
+    {
+      price: 200,
+      name: "Haridwar",
+      stay: "5days/6Nights",
+      rating: 5,
+      imgUrl: PackageImage6,
     },
     {
       isImage: true,
@@ -52,27 +109,10 @@ const TourPackageList = () => {
   ];
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: 32,
-          textAlign: "center",
-        }}
-      >
-        <div style={{ display: "block" }}>
-          <span style={{ fontSize: 20, color: "orange", fontWeight: "bold" }}>
-            Popular Destinations
-          </span>
-          <br />
-          <span style={{ fontSize: 36, color: "black", fontWeight: "bold" }}>
-            {" "}
-            Select Our Best Popular
-            <br /> Destinations
-          </span>
-          <br />
-        </div>
-      </div>
+      <ContentSection
+        title="Popular Destinations"
+        subTitle={`Select Our Best Popular \n Destinations`}
+      />
       <Grid
         md={12}
         xs={12}
@@ -84,15 +124,21 @@ const TourPackageList = () => {
         {list_of__popular_packages.map((packages, key) => (
           <Grid md={3} style={{ padding: 16 }}>
             {packages.isImage ? (
-              <div style={{ paddingBottom: 16, height: '100%' }}>
+              <div style={{ paddingBottom: 16, height: "100%" }}>
                 <Image
                   src={BGImage}
                   alt="cardImg"
-                  style={{ height: "100%", objectFit: "cover",width:'100%' }}
+                  style={{ height: "100%", objectFit: "cover", width: "100%" }}
                 />
               </div>
             ) : (
-              <PackagesList packageName={packages.destinationName} />
+              <PackagesList
+              price={packages.price}
+              name={packages.name}
+              stay={packages.stay}
+              rating={packages.rating}
+              imgUrl={packages.imgUrl}
+            />
             )}
           </Grid>
         ))}
