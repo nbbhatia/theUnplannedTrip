@@ -8,7 +8,7 @@ function Home() {
     <div
       style={{
         background: backgroundColor,
-        height: 80,
+        height: 0,
         display: "flex",
         position: "relative",
         width: "100%",

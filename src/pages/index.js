@@ -20,8 +20,8 @@ const Landing = () => {
       />
       <TourPackagesList />
       <PopularPackages />
-      <WhyTour />
-      <BestPackages />
+      {/* <WhyTour />
+      <BestPackages /> */}
     </Layout>
   );
 };

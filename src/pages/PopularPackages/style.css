@@ -1,7 +1,3 @@
-body{
-    margin:0px;
-    font-family: 'Dancing Script', cursive;
-}
 .container {
     display: flex;
     flex-direction: column;
@@ -11,7 +7,6 @@ body{
     overflow: hidden;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    position: absolute;
   }
   .mySwiper {
     width: 50%;
@@ -40,7 +35,7 @@ body{
   }
   
   .swipItem .imgBox {
-    width: 100%;
+    width: 80%;
     height: 80%;
     margin: 0 auto;
     padding: 5px;
