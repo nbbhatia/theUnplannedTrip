@@ -84,11 +84,11 @@ const TourPackageList = () => {
         {list_of__popular_packages.map((packages, key) => (
           <Grid md={3} style={{ padding: 16 }}>
             {packages.isImage ? (
-              <div style={{ paddingBottom: 16, height: 420 }}>
+              <div style={{ paddingBottom: 16, height: '100%' }}>
                 <Image
                   src={BGImage}
                   alt="cardImg"
-                  style={{ height: "100%", objectFit: "cover" }}
+                  style={{ height: "100%", objectFit: "cover",width:'100%' }}
                 />
               </div>
             ) : (

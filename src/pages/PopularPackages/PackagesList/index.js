@@ -5,16 +5,17 @@ import {Card,CardActions,CardContent,CardMedia,Typography,Button} from '../../..
 
 export default function MediaCard({packageName}) {
   return (
-    <Card >
+    <Card style={{height:'100%',width:'100%'}}>
          <Image
             src={BGImage}
             alt="Vercel Logo"
              
-            style={{height:'140',width:'100%'}}
+            style={{height:'140px',width:'100%'}}
             // priority
           /> 
       
       <CardContent>
+       
         <Typography gutterBottom variant="h5" component="div">
           {packageName}
         </Typography>
