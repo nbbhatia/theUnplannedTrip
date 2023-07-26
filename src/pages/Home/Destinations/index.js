@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image';
-import BGImage from '../../Assets/images/BG.jpg';
+import BGImage from '../../../Assets/images/BG.jpg';
 import Layout from "@/pages/page";
 
 const index = () => {

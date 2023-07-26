@@ -1,9 +1,11 @@
 import React from "react";
 import { color_styling } from "../../../Assets/color";
-export const ContentSection = ({ title, subTitle }) => {
+const ContentSection = ({ title, subTitle }) => {
   const { primaryTextColor, secondaryTextColor } = color_styling;
   const replaceWithBr = () => {
-    return subTitle.replace(/\n/g, "<br />");
+    if (subTitle) {
+      return subTitle.replace(/\n/g, "<br />");
+    }
   };
   return (
     <div
@@ -32,14 +34,15 @@ export const ContentSection = ({ title, subTitle }) => {
             color: secondaryTextColor,
             fontWeight: "bold",
             fontFamily: "Dancing Script ,cursive",
-            margin:0
+            margin: 0,
           }}
-          dangerouslySetInnerHTML={{__html: replaceWithBr()}}
+          dangerouslySetInnerHTML={{ __html: replaceWithBr() }}
         />
-          {/* {subTitle} */}
-        
+        {/* {subTitle} */}
+
         <br />
       </div>
     </div>
   );
 };
+export default ContentSection;

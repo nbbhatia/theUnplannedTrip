@@ -52,7 +52,7 @@ function Home() {
         </li>
         <li style={{ listStyle: "none", margin: 16 }}>
           <Link
-            href="/Destinations"
+            href="/destinationsPackages"
             style={{ color: textColor, fontSize: 16, textDecoration: "none" }}
           >
             Destinations
