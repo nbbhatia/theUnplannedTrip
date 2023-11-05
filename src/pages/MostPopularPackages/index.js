@@ -64,26 +64,80 @@ const MostPopularPackages = () => {
     //     </div>
     //   </Carousel>
     // </div>
-    <div style={{ background: "skyBlue", height: 500 }}>
-      <Image
-        src={BGImage}
-        alt="Vercel Logo"
+    <div>
+      <div
         style={{
-          height: 500,
-          width: "100%",
-          objectFit: "cover",
-          position: "absolute",
+          display: "flex",
+          justifyContent: "center",
+          height: 200,
+          textAlign: "center",
         }}
-        priority
-      />
-      <div style={{ marginLeft: 48, marginRight: 48 }}>
-        <Carousel responsive={responsive}>
-          {Cards.map((card, index) => (
-            <div key={index} style={{ marginTop: 100 }}>
-              <PackageCards />
-            </div>
-          ))}
-        </Carousel>
+      >
+        <p>
+          Find a Tour by <br />{" "}
+          <span
+            style={{
+              color: "black",
+              fontSize: 32,
+              fontWeight: "bold",
+              textDecoration: "underline",
+            }}
+          >
+            Destinations
+          </span>
+        </p>
+      </div>
+      <div style={{ background: "skyBlue", height: 500 }}>
+        <Image
+          src={BGImage}
+          alt="Vercel Logo"
+          style={{
+            height: 500,
+            width: "100%",
+            objectFit: "cover",
+            position: "absolute",
+          }}
+          priority
+        />
+        <div style={{display:"flex",justifyContent:"center",padding:24}}>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              //   height: 200,
+              textAlign: "center",
+                position:"absolute",
+                color: "white",
+            //   zIndex:999
+            }}
+          >
+            <p>
+            Take a Look at Our
+              <br />{" "}
+              <span
+                style={{
+                  color: "white",
+                  fontSize: 32,
+                  fontWeight: "bold",
+                  textDecoration: "underline",
+                }}
+              >
+                MOST POPULAR TOURS
+              </span>
+            </p>
+          </div>
+          </div>
+        <div style={{ marginLeft: 48, marginRight: 48 }}>
+        
+          <Carousel responsive={responsive}>
+            {Cards.map((card, index) => (
+              <div key={index} style={{ marginTop: 100 }}>
+                <PackageCards />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </div>
   );

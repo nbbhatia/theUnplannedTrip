@@ -12,9 +12,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import TravelImage1 from "../Assets/images/travel1.jpg";
 import TravelImage2 from "../Assets/images/travel3.jpg";
 import TravelImage3 from "../Assets/images/travel4.jpg";
-import FindTourByDestinations from "./FindTourByDestination";
-import MostPopularPackages from "./MostPopularPackages"
-// import styles from "../styles/Responsive.module.css";
+// import FindTourByDestinations from "./Reusable/FindTourByDestination";
+import MostPopularPackages from "./MostPopularPackages";
+import WhyChooseUs from "./WhyChooseUs";
+import CenterAcheivements from "./CenterAchivements";
 import "./index.css";
 
 const Landing = () => {
@@ -85,7 +86,7 @@ const Landing = () => {
                   alignContent: "center",
                 }}
               >
-                 <div>
+                <div>
                   <h1 class="cssanimation sequence fadeInBottom">
                     {item.title}
                   </h1>
@@ -95,8 +96,9 @@ const Landing = () => {
           </div>
         ))}
       </Carousel>
-      <FindTourByDestinations />
-      <MostPopularPackages/>
+      <MostPopularPackages />
+      <WhyChooseUs />
+      <CenterAcheivements />
       {/* <TourPackagesList /> */}
       {/* <PopularPackages /> */}
       {/* <WhyTour />
