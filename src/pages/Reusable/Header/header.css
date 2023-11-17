@@ -1,0 +1,22 @@
+/* .router_link{
+    text-decoration: none;
+}
+.router_link:hover{
+cursor: pointer;
+text-decoration: dashed;
+} */
+a{
+    text-decoration: none;
+}
+a::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    transition: 300ms;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }

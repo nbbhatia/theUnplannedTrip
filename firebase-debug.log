@@ -1,0 +1,68 @@
+[debug] [2023-11-16T09:17:32.387Z] ----------------------------------------------------------------------
+[debug] [2023-11-16T09:17:32.391Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JaiShreeRam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-11-16T09:17:32.391Z] CLI Version:   12.4.0
+[debug] [2023-11-16T09:17:32.392Z] Platform:      win32
+[debug] [2023-11-16T09:17:32.392Z] Node Version:  v16.16.0
+[debug] [2023-11-16T09:17:32.393Z] Time:          Thu Nov 16 2023 01:17:32 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-16T09:17:32.393Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-16T09:17:32.527Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-16T09:17:32.528Z] > authorizing via signed-in user (nidhibhatia7078@gmail.com)
+[debug] [2023-11-16T09:17:32.528Z] [iam] checking project theunplannedtrip-55f56 for permissions ["firebase.projects.get"]
+[debug] [2023-11-16T09:17:32.531Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/theunplannedtrip-55f56:testIamPermissions [none]
+[debug] [2023-11-16T09:17:32.531Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/theunplannedtrip-55f56:testIamPermissions x-goog-quota-user=projects/theunplannedtrip-55f56
+[debug] [2023-11-16T09:17:32.532Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/theunplannedtrip-55f56:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-11-16T09:17:34.130Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/theunplannedtrip-55f56:testIamPermissions 200
+[debug] [2023-11-16T09:17:34.131Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/theunplannedtrip-55f56:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-11-16T09:17:34.136Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 [none]
+[debug] [2023-11-16T09:17:34.694Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 200
+[debug] [2023-11-16T09:17:34.695Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 {"projectId":"theunplannedtrip-55f56","projectNumber":"50759724293","displayName":"theUnplannedTrip","name":"projects/theunplannedtrip-55f56","resources":{"hostingSite":"theunplannedtrip-55f56"},"state":"ACTIVE","etag":"1_2e019016-1381-45e6-9a95-38d9598efebb"}
+[info] 
+[info] === Serving from 'C:\Users\JaiShreeRam\developer\nexttrip'...
+[info] 
+[debug] [2023-11-16T09:17:34.706Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 [none]
+[debug] [2023-11-16T09:17:35.249Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 200
+[debug] [2023-11-16T09:17:35.250Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56 {"projectId":"theunplannedtrip-55f56","projectNumber":"50759724293","displayName":"theUnplannedTrip","name":"projects/theunplannedtrip-55f56","resources":{"hostingSite":"theunplannedtrip-55f56"},"state":"ACTIVE","etag":"1_2e019016-1381-45e6-9a95-38d9598efebb"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-11-16T09:17:56.886Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "theunplannedtrip-55f56",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [],
+      "cleanUrls": true,
+      "public": "public",
+      "webFramework": "next"
+    }
+  ]
+}
+[debug] [2023-11-16T09:17:56.891Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/sites 
+[debug] [2023-11-16T09:17:58.235Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/sites 200
+[debug] [2023-11-16T09:17:58.235Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/sites {"sites":[{"name":"projects/theunplannedtrip-55f56/sites/theunplannedtrip-55f56","defaultUrl":"https://theunplannedtrip-55f56.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-16T09:17:58.235Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/webApps/-/config [none]
+[debug] [2023-11-16T09:17:59.257Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/webApps/-/config 200
+[debug] [2023-11-16T09:17:59.257Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/theunplannedtrip-55f56/webApps/-/config {"projectId":"theunplannedtrip-55f56","storageBucket":"theunplannedtrip-55f56.appspot.com","apiKey":"AIzaSyAaVUdYCHF4Ye11t7tf1_1ONoOmdu8SV9o","authDomain":"theunplannedtrip-55f56.firebaseapp.com","messagingSenderId":"50759724293"}
+[info] i  hosting[theunplannedtrip-55f56]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[theunplannedtrip-55f56]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [16/Nov/2023:09:18:11 +0000] "GET / HTTP/1.1" 500 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Nov/2023:09:18:11 +0000] \"GET / HTTP/1.1\" 500 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Nov/2023:09:18:12 +0000] "GET / HTTP/1.1" 500 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Nov/2023:09:18:12 +0000] \"GET / HTTP/1.1\" 500 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Nov/2023:09:18:13 +0000] "GET / HTTP/1.1" 500 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Nov/2023:09:18:13 +0000] \"GET / HTTP/1.1\" 500 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}

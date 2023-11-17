@@ -19,6 +19,8 @@ import CenterAcheivements from "./CenterAchivements";
 import "./index.css";
 
 const Landing = () => {
+
+ 
   const items = {
     bootstrap: [],
     elastic: [],
@@ -44,26 +46,19 @@ const Landing = () => {
       },
     ],
   };
+  
   return (
     <Layout>
-      {/* <Image
-        src={BGImage}
-        alt="Vercel Logo"
-        width="100%"
-        height="100vh"
-        style={{ height: "100vh", width: "100%" ,objectFit:"cover"}}
-        priority
-      /> */}
       <Carousel
         showArrows={false}
         infiniteLoop={true}
         dynamicHeight={false}
         autoPlay={true}
-        style={{ position: "relative" }}
-        // className={styles.mySwiper}
+        showThumbs={false}
+        // style={{ position: "relative" }}
       >
-        {items?.responsive?.map((item) => (
-          <div key={item.id}>
+        {items?.responsive?.map((item,index) => (
+          <div key={index}>
             <div
               style={{
                 width: "100%",
@@ -81,7 +76,6 @@ const Landing = () => {
               <div
                 style={{
                   background: "transparent",
-                  position: "absolute",
                   display: "flex",
                   alignContent: "center",
                 }}
