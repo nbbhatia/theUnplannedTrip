@@ -13,7 +13,7 @@ import VisaCard from "../../../Assets/images/visa.jpg";
 import Image from "next/image";
 
 function Footer() {
-  const { backgroundColor, secondaryTextColor, primaryTextColor, textColor } =
+  const { backgroundColor, secondaryTextColor, textColor } =
     color_styling;
   return (
     <Grid
@@ -23,13 +23,13 @@ function Footer() {
       item
       container
       justifyContent="center"
-      style={{ background: secondaryTextColor,  padding: 32 }}
+      style={{ background: "#0f2454",  padding: 32 }}
     >
       <Grid md={3} item style={{ alignContent: "center", display: "grid" }}>
         <div style={{ display: "flex" }}>
           <AddLocationIcon
             style={{
-              color: primaryTextColor,
+              color: "#fff",
               fontSize: 24,
               fontWeight: "bold",
             }}
@@ -72,7 +72,7 @@ function Footer() {
           <div style={{ display: "flex" }}>
             <InstagramIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 16px 8px 0",
@@ -80,7 +80,7 @@ function Footer() {
             />
             <TwitterIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 8px 8px 16px",
@@ -88,7 +88,7 @@ function Footer() {
             />
             <GoogleIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 8px 8px 16px",
@@ -121,7 +121,7 @@ function Footer() {
           <div style={{ display: "flex", margin: "16px 0" }}>
             <LocalPhoneIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 16px 8px 0",
@@ -142,7 +142,7 @@ function Footer() {
           <div style={{ display: "flex", margin: "16px 0" }}>
             <EmailIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 16px 8px 0",
@@ -164,7 +164,7 @@ function Footer() {
           <div style={{ display: "flex", margin: "16px 0" }}>
             <AddLocationIcon
               style={{
-                color: primaryTextColor,
+                color: "#fff",
                 fontSize: 24,
                 fontWeight: "bold",
                 margin: "8px 16px 8px 0",

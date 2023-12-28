@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import BGImage from "../Assets/images/BG.jpg";
-import TourPackagesList from "./Reusable/Carousel";
-import PopularPackages from "./Home/PopularPackages";
-import WhyTour from "../pages/WhyTour";
-import BestPackages from "../pages/BestPackages";
+// import BGImage from "../Assets/images/BG.jpg";
+// import TourPackagesList from "./Reusable/Carousel";
+// import PopularPackages from "./Home/PopularPackages";
+// import WhyTour from "../pages/WhyTour";
+// import BestPackages from "../pages/BestPackages";
 import Layout from "@/pages/page";
 import { Carousel } from "react-responsive-carousel";
 import { items } from "./Items.json";
@@ -16,11 +16,12 @@ import TravelImage3 from "../Assets/images/travel4.jpg";
 import MostPopularPackages from "./MostPopularPackages";
 import WhyChooseUs from "./WhyChooseUs";
 import CenterAcheivements from "./CenterAchivements";
+import ExplorePackages from "./ExploreDestinations";
+import DestinationsPackages from "./destinationsPackages/destinations";
 import "./index.css";
 
 const Landing = () => {
 
- 
   const items = {
     bootstrap: [],
     elastic: [],
@@ -90,11 +91,15 @@ const Landing = () => {
           </div>
         ))}
       </Carousel>
+      <DestinationsPackages/>
       <MostPopularPackages />
       <WhyChooseUs />
-      <CenterAcheivements />
+      {/* <CenterAcheivements /> */}
+      {/* <ExplorePackages/>
+       <MostPopularPackages />
+      <WhyChooseUs /> */}
       {/* <TourPackagesList /> */}
-      {/* <PopularPackages /> */}
+     
       {/* <WhyTour />
       <BestPackages /> */}
     </Layout>

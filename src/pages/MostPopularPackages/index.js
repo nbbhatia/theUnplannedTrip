@@ -1,12 +1,50 @@
 import React from "react";
 import Image from "next/image";
 import BGImage from "../../Assets/images/destBg.jpg";
-import PackageCards from "./PackagesCards";
+import PackageCards from "../PackagesCards";
 import Carousel from "react-multi-carousel";
+import PkgeImage1 from "../../Assets/images/p-1.png";
+import PkgeImage2 from "../../Assets/images/p-2.png";
+import PkgeImage3 from "../../Assets/images/p-3.png";
+import PkgeImage4 from "../../Assets/images/p-4.png";
+import PkgeImage5 from "../../Assets/images/p-5.png";
 import "react-multi-carousel/lib/styles.css";
+import { Typography } from "@mui/material";
 
 const MostPopularPackages = () => {
-  let Cards = [1, 2, 3, 4, 5, 6, 7, 8];
+  let Cards = [
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage1,
+      price: 200
+    },
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage2,
+      price: 300
+    },
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage3,
+      price: 700
+    },
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage4,
+      price: 800
+    },
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage3,
+      price: 700
+    },
+    {
+      title: "Handpicked Hotels",
+      image: PkgeImage4,
+      price: 800
+    },
+
+  ];
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -65,78 +103,27 @@ const MostPopularPackages = () => {
     //   </Carousel>
     // </div>
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: 200,
-          textAlign: "center",
-        }}
-      >
-        <p>
-          Find a Tour by <br />{" "}
-          <span
-            style={{
-              color: "black",
-              fontSize: 32,
-              fontWeight: "bold",
-              textDecoration: "underline",
-            }}
-          >
-            Destinations
-          </span>
-        </p>
+      <div style={{ display: "block", paddingBottom: 24, padding: 48 }}>
+        <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
+          CHOOSE YOUR PLACE
+        </Typography>
+        <Typography variant="h4" style={{ color: "#2095AE" }}>
+          <span style={{ color: "#0f2454", fontWeight: "bold" }}>
+            Popular
+          </span> <span style={{ letterSpacing: 10 }}> TOURS</span>
+        </Typography>
       </div>
-      <div style={{ background: "skyBlue", height: 500 }}>
-        <Image
-          src={BGImage}
-          alt="Vercel Logo"
-          style={{
-            height: 500,
-            width: "100%",
-            objectFit: "cover",
-            position: "absolute",
-          }}
-          priority
-        />
-        <div style={{display:"flex",justifyContent:"center",padding:24}}>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              //   height: 200,
-              textAlign: "center",
-                position:"absolute",
-                color: "white",
-            //   zIndex:999
-            }}
-          >
-            <p>
-            Take a Look at Our
-              <br />{" "}
-              <span
-                style={{
-                  color: "white",
-                  fontSize: 32,
-                  fontWeight: "bold",
-                  textDecoration: "underline",
-                }}
-              >
-                MOST POPULAR TOURS
-              </span>
-            </p>
-          </div>
-          </div>
-        <div style={{ marginLeft: 48, marginRight: 48 }}>
-        
-          <Carousel responsive={responsive}>
+      <div style={{ background: "#2095AE", height: "100%",padding:48 }}>
+      <Carousel responsive={responsive}>
             {Cards.map((card, index) => (
-              <div key={index} style={{ marginTop: 100 }}>
-                <PackageCards />
+              <div key={index} >
+                <PackageCards title={card.title} packgImage={card.image} price={card.price} />
               </div>
             ))}
           </Carousel>
+        <div >
+
+         
         </div>
       </div>
     </div>

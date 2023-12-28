@@ -27,18 +27,15 @@ const WhyChooseUs = () => {
     },
   ];
   return (
-    <div style={{ padding: 48 }}>
+    <div style={{ padding: 48 ,}}>
       <div
         style={{
-          display: "flex",
-          justifyContent: "center",
-          height: 200,
-          textAlign: "center",
-          fontSize: 24,
+           fontSize: 24,
           fontWeight: "bold",
+
         }}
       >
-        <p>WHY CHOOSE US ?</p>
+        <Typography variant="h4" style={{color: "#0f2454"}}>WHY CHOOSE US ?</Typography>
       </div>
       <div style={{ display: "flex" }}>
         {whyChooseArray.map((obj, key) => (
@@ -54,10 +51,10 @@ const WhyChooseUs = () => {
               priority
             />
             <span>
-              <Typography style={{ textAlign: "center" }}>
+              <Typography  variant="h6" style={{ textAlign: "center",color: "#0f2454" ,fontWeight:"bold"}}>
                 {obj.title}
               </Typography>
-              <Typography style={{ textAlign: "center" }}>
+              <Typography style={{ textAlign: "center" ,color: "#2095AE"}}>
                 {obj.subTitle}
               </Typography>
             </span>
