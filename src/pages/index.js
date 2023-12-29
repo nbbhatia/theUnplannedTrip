@@ -18,6 +18,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import CenterAcheivements from "./CenterAchivements";
 import ExplorePackages from "./ExploreDestinations";
 import DestinationsPackages from "./destinationsPackages/destinations";
+// import UkVideo from "./Reusable/VideoGraphics"
 import "./index.css";
 
 const Landing = () => {
@@ -93,7 +94,8 @@ const Landing = () => {
       </Carousel>
       <DestinationsPackages/>
       <MostPopularPackages />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
+      {/* <UkVideo/> */}
       {/* <CenterAcheivements /> */}
       {/* <ExplorePackages/>
        <MostPopularPackages />

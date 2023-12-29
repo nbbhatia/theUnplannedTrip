@@ -11,38 +11,38 @@ import "./card.css"
 
 export default function BasicCard(props) {
   console.log(props)
-  let { title, packgImage, price ,isDestinationCard} = props
+  let { title, packgImage, price, isDestinationCard } = props
   return (
     <Box sx={{ ml: 2 }}>
 
 
-      <Card style={{ padding:0, boxShadow: "none", gap: 0 }}>
+      <Card style={{ padding: 0, boxShadow: "none", gap: 0 }}>
 
         <img
           src={packgImage?.src}
           alt="package-image"
           className="gradient-image"
-          style={{ height: !isDestinationCard ? "100%" : 330, width: "100%",borderRadius: "7px 7px 0 0"}}
+          style={{ height: !isDestinationCard ? "100%" : 330, width: "100%", borderRadius: "7px 7px 0 0" }}
         />
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
             <Typography level="title-lg" style={{ color: "#fff" }}>{title}</Typography>
             <Typography fontSize="lg" fontWeight="lg" style={{ color: "#fff" }}>
-                  Rs.{price} k
-                </Typography>
+              Rs.{price} k
+            </Typography>
           </div>
         }
         {!isDestinationCard &&
-          <div style={{padding:16}}>
+          <div style={{ padding: 16 }}>
             <Typography level="title-lg">{title}</Typography>
 
 
             <CardContent orientation="horizontal">
-              <div>
-                <Typography level="body-xs">Total price:</Typography>
-                <Typography fontSize="lg" fontWeight="lg">
+              <div style={{display:"flex",alignItems:"center"}}>
+                <Typography level="body-xs">Total price: <span style={{fontSize:16,color:"#000",fontWeight:"bold"}}>Rs.{price} k</span></Typography>
+                {/* <Typography fontSize="lg" fontWeight="lg">
                   Rs.{price} k
-                </Typography>
+                </Typography> */}
               </div>
               <Button
                 variant="solid"

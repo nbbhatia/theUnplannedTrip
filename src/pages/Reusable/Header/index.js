@@ -14,7 +14,8 @@ const Home = () => {
 
   let linksArray = [
     { title: "Home", url: "/" },
-    { title: "Tours", url: "/" },
+    
+    { title: "Tours", url: "/subDestinations" },
     { title: "Destinations", url: "/destinationsPackages" },
     { title: "Blog", url: "/" },
     { title: "Contact", url: "/" },

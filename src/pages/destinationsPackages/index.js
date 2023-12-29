@@ -7,7 +7,7 @@ import Destinations from "./destinations";
 import BasicBreadcrumbs from "../Reusable/BreadCrumbs";
 
 function DestinationsPackages() {
-  let directionsList = ["East", "West", "North", "South"];
+  
   return (
     <Layout style={{ margin: 0 }}>
       <Image
