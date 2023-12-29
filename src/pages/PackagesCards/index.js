@@ -11,7 +11,7 @@ import "./card.css"
 
 export default function BasicCard(props) {
   console.log(props)
-  let { title, packgImage, price, isDestinationCard } = props
+  let { title, packgImage, price, isDestinationCard ,isSubDestinations} = props
   return (
     <Box sx={{ ml: 2 }}>
 
@@ -51,7 +51,7 @@ export default function BasicCard(props) {
                 aria-label="Explore Bahamas Islands"
                 sx={{ ml: "auto", alignSelf: "center", fontWeight: 600 }}
               >
-                Explore
+               <a href={isSubDestinations&& "/packageDetails"} style={{color:"#fff",textDecoration:"none"}}> Explore</a>
               </Button>
             </CardContent>
           </div>

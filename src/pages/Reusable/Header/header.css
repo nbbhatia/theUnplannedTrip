@@ -5,18 +5,20 @@
 cursor: pointer;
 text-decoration: dashed;
 } */
-a{
-    text-decoration: none;
+.href-link {
+  text-decoration: none;
+  color:#fff;
 }
-a::after {
-    content: '';
-    width: 0px;
-    height: 2px;
-    display: block;
-    background: #fff;
-    transition: 300ms;
-  }
-  
-  a:hover::after {
-    width: 100%;
-  }
+
+.href-link::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #fff;
+  transition: 300ms;
+}
+
+.href-link:hover::after {
+  width: 100%;
+}

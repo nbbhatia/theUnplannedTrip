@@ -9,8 +9,7 @@ import PkgeImage3 from "../../Assets/images/p-3.png";
 import PkgeImage4 from "../../Assets/images/p-4.png";
 import PkgeImage5 from "../../Assets/images/p-5.png";
 import PkgeImage6 from "../../Assets/images/p-5.png";
-// import Destinations from "./destinations";
-import BasicBreadcrumbs from "../Reusable/BreadCrumbs";
+
 import { Grid, Box } from "@mui/material";
 
 const subDestionations = () => {
@@ -54,7 +53,7 @@ const subDestionations = () => {
     },
     {
       packageName: "Nainital",
-      imageUrl: PkgeImage6,
+      imageUrl: PkgeImage1,
       price: 500,
       NoOfTours: 4,
     },
@@ -66,24 +65,24 @@ const subDestionations = () => {
     },
     {
       packageName: "Kotdwar",
-      imageUrl: PkgeImage6,
+      imageUrl: PkgeImage2,
       price: 500,
       NoOfTours: 4,
     },
     {
       packageName: "Lansdowne",
-      imageUrl: PkgeImage6,
+      imageUrl: PkgeImage3,
       price: 500,
       NoOfTours: 4,
     }, {
       packageName: "Gangotri",
-      imageUrl: PkgeImage6,
+      imageUrl: PkgeImage4,
       price: 500,
       NoOfTours: 4,
     },
     {
       packageName: "Yamnoutri",
-      imageUrl: PkgeImage6,
+      imageUrl: PkgeImage5,
       price: 500,
       NoOfTours: 4,
     },
@@ -102,19 +101,12 @@ const subDestionations = () => {
         style={{ height: "80vh", width: "100%", objectFit: "cover" }}
         priority
       />
-      <div style={{ position: "absolute", top: 300, left: 100, color: "#fff" }}>
-        {/* <BasicBreadcrumbs /> */}
-        {/* <h3
-          style={{ color: "#fff" }}
-        >
-          Destinations
-        </h3> */}
-      </div>
+
       <Grid md={12} sm={12} xs={12} item container style={{ padding: 48, display: "flex", flexWrap: "wrap" }}>
         {arrayOfSubDestinations.map((card, index) => (
 
           <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-            <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} />
+            <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} />
           </Grid>
 
 
