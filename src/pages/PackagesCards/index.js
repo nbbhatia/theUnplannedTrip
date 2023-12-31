@@ -11,18 +11,15 @@ import "./card.css"
 
 export default function BasicCard(props) {
   console.log(props)
-  let { title, packgImage, price, isDestinationCard ,isSubDestinations} = props
+  let { title, packgImage, price, isDestinationCard, isSubDestinations } = props
   return (
-    <Box sx={{ ml: 2 }}>
-
-
+    <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
       <Card style={{ padding: 0, boxShadow: "none", gap: 0 }}>
-
         <img
           src={packgImage?.src}
           alt="package-image"
           className="gradient-image"
-          style={{ height: !isDestinationCard ? "100%" : 330, width: "100%", borderRadius: "7px 7px 0 0" }}
+          style={{ height: !isDestinationCard ? "200px" : 330, width: "100%", borderRadius: "7px 7px 0 0" ,objectFit:"cover"}}
         />
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
@@ -38,8 +35,8 @@ export default function BasicCard(props) {
 
 
             <CardContent orientation="horizontal">
-              <div style={{display:"flex",alignItems:"center"}}>
-                <Typography level="body-xs">Total price: <span style={{fontSize:16,color:"#000",fontWeight:"bold"}}>Rs.{price} k</span></Typography>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Typography level="body-xs">Total price: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
                 {/* <Typography fontSize="lg" fontWeight="lg">
                   Rs.{price} k
                 </Typography> */}
@@ -51,7 +48,7 @@ export default function BasicCard(props) {
                 aria-label="Explore Bahamas Islands"
                 sx={{ ml: "auto", alignSelf: "center", fontWeight: 600 }}
               >
-               <a href={isSubDestinations&& "/packageDetails"} style={{color:"#fff",textDecoration:"none"}}> Explore</a>
+                <a href={isSubDestinations && "/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> Explore</a>
               </Button>
             </CardContent>
           </div>
@@ -60,54 +57,4 @@ export default function BasicCard(props) {
     </Box>
   );
 }
-
-// import * as React from 'react';
-// import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-// import { Box } from "@mui/material";
-
-// export default function MediaCard(props) {
-//   let { title, packgImage, price } = props
-//   return (
-//     <Box sx={{ ml: 2 }}>
-//       <Card sx={{ maxWidth: 345 }} style={{boxShadow:"none"}}>
-//         {/* <CardMedia
-//           sx={{ height: 140 }}
-//           image={packgImage}
-//           title="package Image"
-//         /> */}
-//         <img
-//           src={packgImage?.src}
-//           alt=""
-//           style={{ height: 140, width: "100%" }}
-//         />
-//         {price ?
-//           <CardContent>
-//             <Typography gutterBottom variant="h5" component="div">
-//               {title}
-//             </Typography>
-//             <Typography variant="body2" color="text.secondary">
-//               Lizards are a widespread group of squamate reptiles, with over 6,000
-//               species, ranging across all continents except Antarctica
-//             </Typography>
-//             <div style={{ display: "flex", justifyContent: "space-between" }}>
-//               <Typography level="body-xs">Total price:</Typography>
-//               <Typography fontSize="lg" fontWeight="lg">
-//                 $2,900
-//               </Typography>
-//             </div>
-//           </CardContent>
-
-//           : <Typography gutterBottom variant="h5" component="div">
-//             {title}
-//           </Typography>
-//         }
-//       </Card>
-//     </Box>
-//   );
-// }
 

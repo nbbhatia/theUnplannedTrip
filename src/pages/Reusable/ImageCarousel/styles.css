@@ -1,0 +1,11 @@
+.carousel .thumb {
+    height:100px;
+    width:500px;
+    border-radius: 16px;
+    padding: 0;
+}
+.carousel .thumbs-wrapper {
+    width: 90%;
+    overflow: scroll;
+   
+}
