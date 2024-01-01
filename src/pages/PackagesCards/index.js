@@ -13,7 +13,7 @@ export default function BasicCard(props) {
   let { title, packgImage, price, isDestinationCard, isSubDestinations } = props
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
-      <Card style={{ padding: 0, boxShadow: "none", gap: 0 }}>
+      <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0 }}>
         <img
           src={packgImage?.src}
           alt="package-image"

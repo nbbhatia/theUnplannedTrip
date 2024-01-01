@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { color_styling } from "../../../Assets/color";
 import Logo from "../../../Assets/images/Logo.png";
 import Container from "@mui/material/Container";
@@ -14,7 +12,7 @@ const Home = () => {
 
   let linksArray = [
     { title: "Home", url: "/" },
-
+    { title: "About", url: "/about" },
     { title: "Tours", url: "/subDestinations" },
     { title: "Destinations", url: "/destinationsPackages" },
     { title: "Blog", url: "/" },

@@ -23,7 +23,7 @@ function Footer() {
       item
       container
       justifyContent="center"
-      style={{ background: "#0f2454",  padding: 32 }}
+      style={{ background: "#2095AE",  padding: 32 }}
     >
       <Grid md={3} item style={{ alignContent: "center", display: "grid" }}>
         <div style={{ display: "flex" }}>
