@@ -10,7 +10,7 @@ const FormikForm = (props) => {
     const [message, setMessage] = useState(''); // This will be used to show a message if the submission is successful
     const [submitted, setSubmitted] = useState(false);
     const [value, setValues] = useState();
-    const {formValues,buttonText}=props;
+    const { formValues, buttonText } = props;
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -34,12 +34,12 @@ const FormikForm = (props) => {
         console.log(e.target.value)
         setValues(e.target.value)
     }
-   
+
     return (
         <Grid md={12} xs={12} sm={12} item container>
 
             <form style={{ width: "100%" }} onSubmit={formik.handleSubmit}>
-                {formValues.map((formFeild, index) =>
+                {formValues?.map((formFeild, index) =>
                 (
                     <div key={index} style={{ display: "block", margin: 16 }}>
                         <TextField
@@ -60,8 +60,8 @@ const FormikForm = (props) => {
 
                 ))}
                 <Grid md={12} xs={12} sm={12} item container justifyContent={"center"}>
-                    <Button type="submit" variant='contained' style={{background:buttonText==="Send Enquiry"?"#FFB300":"#26BDF7",color:"black"}} onClick={console.log("hello")}>
-                       {buttonText}
+                    <Button type="submit" variant='contained' style={{ background: buttonText === "Send Enquiry" ? "#FFB300" : "#26BDF7", color: "black" }} onClick={()=>console.log("hello")}>
+                        {buttonText}
                     </Button>
                 </Grid>
 

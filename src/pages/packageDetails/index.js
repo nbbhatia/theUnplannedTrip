@@ -114,13 +114,13 @@ const PackageDetails = () => {
       price: 500,
       NoOfTours: 4,
     },
-   
+
   ];
   return (
     <Layout style={{ margin: 0 }}>
       {packageDetailData?.map((data, index) =>
       (
-        <Grid key={index} md={12} xs={12} sm={12} item container style={{ display: "flex",  position:"relative", }}>
+        <Grid key={index} md={12} xs={12} sm={12} item container style={{ display: "flex", position: "relative", }}>
           <ImageCarousel galleryImages={data.TourGallery} />
           <Grid md={8} xs={12} sm={12} item style={{ display: "block" }}>
             <div style={{ display: "block", padding: 48 }}>
@@ -189,8 +189,8 @@ const PackageDetails = () => {
                 <Grid md={12} xs={12} sm={12} item style={{ paddingRight: 24 }}>
                   {data.ItenaryInfo.map((info, index) =>
                   (
-                    <>
-                      <Grid key={index} md={12} xs={12} sm={12} item container justifyContent="space-between" style={{ borderBottom: "1px solid #676977", padding: "16px 0" }}>
+                    <div key={index}>
+                      <Grid  md={12} xs={12} sm={12} item container justifyContent="space-between" style={{ borderBottom: "1px solid #676977", padding: "16px 0" }}>
                         <Typography
                           style={{
                             color: "#0f2454",
@@ -221,10 +221,7 @@ const PackageDetails = () => {
 
                               </span>
                             ))}
-
                           </div>
-
-
                           : <Typography
                             style={{
                               color: "#2095AE",
@@ -238,7 +235,7 @@ const PackageDetails = () => {
 
 
                       </Grid>
-                    </>
+                    </div>
                   ))}
                 </Grid>
               </Grid>
@@ -263,8 +260,8 @@ const PackageDetails = () => {
           <Grid md={4} xs={12} sm={12} item style={{
             background: "#f4f5f8",
             padding: "45px 25px",
-            height:"100%",
-          
+            height: "100%",
+
           }}>
             <Typography variant="h4" style={{ color: "#0f2454", textAlign: "center", marginBottom: 24 }}>
               Book the Tour
@@ -281,20 +278,17 @@ const PackageDetails = () => {
         </Grid>
       ))}
       <Grid>
-      <Typography variant="h4" style={{ color: "#0f2454", letterSpacing: 10 ,padding:"0 48px"}}>
-               Related TOURS
-              </Typography>
+        <Typography variant="h4" style={{ color: "#0f2454", letterSpacing: 10, padding: "0 48px" }}>
+          Related TOURS
+        </Typography>
         <Grid md={12} sm={12} xs={12} item container style={{ padding: 32, display: "flex", flexWrap: "wrap" }}>
-        {arrayOfRelatedTours.map((card, index) => (
+          {arrayOfRelatedTours.map((card, index) => (
+            <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+              <PackagesCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} />
+            </Grid>
+          ))}
 
-          <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-            <PackagesCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} />
-          </Grid>
-
-
-        ))}
-
-      </Grid>
+        </Grid>
       </Grid>
 
     </Layout>

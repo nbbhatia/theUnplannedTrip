@@ -20,10 +20,9 @@ const TourGallery = (props) => {
                 onChange={handleChange}
                 className="carousel-container"
             >
-                {galleryImages.map((image, index) => (
+                {galleryImages?.map((image, index) => (
                     <div key={index} style={{ height: "80vh", width: "100%" }}>
                         <img src={image.src} alt={index} style={{ height: "100%", width: "100%", objectFit: "cover" }} />
-
                     </div>))}
             </Carousel>
         </div>

@@ -10,7 +10,6 @@ import { Box } from "@mui/material";
 import "./card.css"
 
 export default function BasicCard(props) {
-  console.log(props)
   let { title, packgImage, price, isDestinationCard, isSubDestinations } = props
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>

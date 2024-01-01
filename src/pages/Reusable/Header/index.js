@@ -69,8 +69,9 @@ const Home = () => {
             display: "flex",
           }}
         >
-          {linksArray.map((link, key) => (
+          {linksArray.map((link, index) => (
             <li
+              key={index}
               className="router_link"
               style={{ listStyle: "none", margin: 16 }}
             >

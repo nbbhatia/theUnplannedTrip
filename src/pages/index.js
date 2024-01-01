@@ -94,7 +94,7 @@ const Landing = () => {
       </Carousel>
       <DestinationsPackages/>
       <MostPopularPackages />
-      {/* <WhyChooseUs /> */}
+      <WhyChooseUs />
       {/* <UkVideo/> */}
       {/* <CenterAcheivements /> */}
       {/* <ExplorePackages/>
