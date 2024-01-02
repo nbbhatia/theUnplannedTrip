@@ -18,6 +18,7 @@ import PkgeImage15 from "../../Assets/images/imagesofharidwar/haridwar15.jpg";
 import PkgeImage16 from "../../Assets/images/imagesofharidwar/haridwar16.jpg";
 import PkgeImage17 from "../../Assets/images/imagesofharidwar/haridwar17.jpg";
 import PkgeImage18 from "../../Assets/images/imagesofharidwar/haridwar18.jpg";
+import BGImage from "../../Assets/images/p-4.png";
 import Layout from '../page';
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
@@ -26,6 +27,8 @@ import Accordian from "../Reusable/Accordian";
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import QueryForm from "../Reusable/QueryForm";
 import PackagesCards from "../PackagesCards";
+import ImageModal from "../Reusable/ImageModal"
+import Image from 'next/image';
 const PackageDetails = () => {
   const packageDetailData = [
     {
@@ -121,17 +124,31 @@ const PackageDetails = () => {
       {packageDetailData?.map((data, index) =>
       (
         <Grid key={index} md={12} xs={12} sm={12} item container style={{ display: "flex", position: "relative", }}>
-          <ImageCarousel galleryImages={data.TourGallery} />
+          <Image
+            src={BGImage}
+            alt="Vercel Logo"
+            style={{ height: "80vh", width: "100%", objectFit: "cover" }}
+            priority
+          />
+
           <Grid md={8} xs={12} sm={12} item style={{ display: "block" }}>
+
             <div style={{ display: "block", padding: 48 }}>
+              <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center" }}>
+              <div style={{ display: "block" }}>
               <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
-                Travel Agency
-              </Typography>
-              <Typography variant="h2" style={{ color: "#2095AE", paddingTop: 8, }}>
+                  Travel Agency
+                </Typography>
+                <Typography variant="h2" style={{ color: "#2095AE", paddingTop: 8, }}>
                 <span style={{ color: "#0f2454", fontWeight: "bold" }}>
                   {data.packageName}
                 </span> Uttarakhand
               </Typography>
+              </div>
+               
+                <ImageModal galleryImages={data.TourGallery} />
+              </div>
+             
               <div style={{ display: "flex", paddingTop: "16px" }}>
                 <AccessAlarmsIcon
                   style={{
@@ -190,7 +207,7 @@ const PackageDetails = () => {
                   {data.ItenaryInfo.map((info, index) =>
                   (
                     <div key={index}>
-                      <Grid  md={12} xs={12} sm={12} item container justifyContent="space-between" style={{ borderBottom: "1px solid #676977", padding: "16px 0" }}>
+                      <Grid md={12} xs={12} sm={12} item container justifyContent="space-between" style={{ borderBottom: "1px solid #676977", padding: "16px 0" }}>
                         <Typography
                           style={{
                             color: "#0f2454",

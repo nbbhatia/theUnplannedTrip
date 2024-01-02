@@ -21,7 +21,7 @@ const TourGallery = (props) => {
                 className="carousel-container"
             >
                 {galleryImages?.map((image, index) => (
-                    <div key={index} style={{ height: "80vh", width: "100%" }}>
+                    <div key={index} style={{ height: "50vh", width: "100%" }}>
                         <img src={image.src} alt={index} style={{ height: "100%", width: "100%", objectFit: "cover" }} />
                     </div>))}
             </Carousel>
