@@ -14,15 +14,22 @@ export default function BasicCard(props) {
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
       <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0 }}>
-        <img
-          src={packgImage?.src}
-          alt="package-image"
-          className="gradient-image"
-          style={{ height: !isDestinationCard ? "200px" : 330, width: "100%", borderRadius: "7px 7px 0 0" ,objectFit:"cover"}}
-        />
+        <a href="/cityWiseDestinations" className="href-link">
+          <img
+            src={packgImage?.src}
+            alt="package-image"
+            className="gradient-image"
+            style={{ height: !isDestinationCard ? "200px" : 330, width: "100%", borderRadius: "7px 7px 0 0", objectFit: "cover" }}
+          />
+        </a>
+
+
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
-            <Typography level="title-lg" style={{ color: "#fff" }}>{title}</Typography>
+            <a href="/cityWiseDestinations" className="href-link">
+              <Typography level="title-lg">{title}</Typography>
+            </a>
+
             <Typography fontSize="lg" fontWeight="lg" style={{ color: "#fff" }}>
               Rs.{price} k
             </Typography>
@@ -30,7 +37,9 @@ export default function BasicCard(props) {
         }
         {!isDestinationCard &&
           <div style={{ padding: 16 }}>
-            <Typography level="title-lg">{title}</Typography>
+            <a href="/cityWiseDestinations" className="href-link">
+              <Typography level="title-lg">{title}</Typography>
+            </a>
 
 
             <CardContent orientation="horizontal">

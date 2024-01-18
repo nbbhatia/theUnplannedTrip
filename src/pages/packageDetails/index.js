@@ -25,7 +25,7 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import ImageCarousel from "../Reusable/ImageCarousel";
 import Accordian from "../Reusable/Accordian";
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import QueryForm from "../Reusable/QueryForm";
+import Form from "../Reusable/FormContainer"
 import PackagesCards from "../PackagesCards";
 import ImageModal from "../Reusable/ImageModal"
 import Image from 'next/image';
@@ -72,19 +72,7 @@ const PackageDetails = () => {
     { key: "Day 6: Adventure Begins", value: "Travel non lorem ac erat suscipit bibendum nulla facilisi. Sedeuter nunc volutpat miss sapien vel conseyen turpeutionyer masin libero sevenion vusetion viventa augue sit amet hendrerit vestibulum. Duisteyerion venenatis lacus gravida eros ut turpis interdum ornare." },
     { key: "Day 7: Return", value: "Travel non lorem ac erat suscipit bibendum nulla facilisi. Sedeuter nunc volutpat miss sapien vel conseyen turpeutionyer masin libero sevenion vusetion viventa augue sit amet hendrerit vestibulum. Duisteyerion venenatis lacus gravida eros ut turpis interdum ornare." },
   ]
-  let BookingFormValues = [
-    { name: "Name", type: "text" },
-    { name: "Email", type: "email" },
-    { name: "PhoneNo.", type: "number" },
-    { name: "BookingDate", type: "date" },
-    { name: "Messages", type: "textArea" }
-  ]
-  let QueryFormValues = [
-    { name: "Name", type: "text" },
-    { name: "Email", type: "email" },
-    { name: "PhoneNo.", type: "number" },
-    { name: "Messages", type: "textArea" }
-  ]
+
   let arrayOfRelatedTours = [
     { packageName: "Haridwar", imageUrl: PkgeImage6, price: 500, NoOfTours: 5 },
     {
@@ -134,21 +122,21 @@ const PackageDetails = () => {
           <Grid md={8} xs={12} sm={12} item style={{ display: "block" }}>
 
             <div style={{ display: "block", padding: 48 }}>
-              <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center" }}>
-              <div style={{ display: "block" }}>
-              <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
-                  Travel Agency
-                </Typography>
-                <Typography variant="h2" style={{ color: "#2095AE", paddingTop: 8, }}>
-                <span style={{ color: "#0f2454", fontWeight: "bold" }}>
-                  {data.packageName}
-                </span> Uttarakhand
-              </Typography>
-              </div>
-               
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div style={{ display: "block" }}>
+                  <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
+                    Travel Agency
+                  </Typography>
+                  <Typography variant="h2" style={{ color: "#2095AE", paddingTop: 8, }}>
+                    <span style={{ color: "#0f2454", fontWeight: "bold" }}>
+                      {data.packageName}
+                    </span> Uttarakhand
+                  </Typography>
+                </div>
+
                 <ImageModal galleryImages={data.TourGallery} />
               </div>
-             
+
               <div style={{ display: "flex", paddingTop: "16px" }}>
                 <AccessAlarmsIcon
                   style={{
@@ -280,17 +268,7 @@ const PackageDetails = () => {
             height: "100%",
 
           }}>
-            <Typography variant="h4" style={{ color: "#0f2454", textAlign: "center", marginBottom: 24 }}>
-              Book the Tour
-            </Typography>
-            <QueryForm formValues={BookingFormValues} buttonText="Booking Now" />
-            <Typography variant="h4" style={{ color: "#0f2454", textAlign: "center", margin: "24px 0" }}>
-              OR
-            </Typography>
-            <Typography variant="body1" style={{ color: "#0f2454", textAlign: "center" }}>
-              Fill up the form below to tell us what you're looking for
-            </Typography>
-            <QueryForm formValues={QueryFormValues} buttonText="Send Enquiry" />
+            <Form />
           </Grid>
         </Grid>
       ))}

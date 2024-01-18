@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { color_styling } from "../../../Assets/color";
-import Logo from "../../../Assets/images/Logo.png";
+import Logo from "../../../Assets/images/logo.jpeg";
 import Container from "@mui/material/Container";
 import "./header.css";
 
