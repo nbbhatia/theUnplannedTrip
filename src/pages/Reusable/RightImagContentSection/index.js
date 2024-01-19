@@ -4,9 +4,12 @@ import React from 'react'
 import PkgeImage2 from "../../../Assets/images/p-2.png";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import { useRouter } from 'next/router'
+
 const RightImagContentSection = () => {
+    const location = useRouter();
     return (
-        <Grid md={12} xs={12} sm={12} item container style={{ padding: "128px", alignItems: "center" }}>
+        <Grid md={12} xs={12} sm={12} item container style={{ padding: "128px", alignItems: "end" }}>
             <Grid md={7} xs={12} sm={12} item >
                 <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
                     THE BEST TRAVEL AGENCY
@@ -39,25 +42,26 @@ const RightImagContentSection = () => {
                     priority
                 />
             </Grid>
-            <div style={{display:"block"}}>
-                <Grid style={{ display: "flex",marginBottom:16 }}>
-                    <CheckCircleIcon style={{ color: "#2095AE", marginRight: 8 }} />
-                    <Typography style={{ color: "#676977" }}>20 Years of Experience</Typography>
-                </Grid>
-                <Grid style={{ display: "flex" }}>
-                    <CheckCircleIcon style={{ color: "#2095AE", marginRight: 8 }} />
-                    <Typography style={{ color: "#676977" }}>150+ Tour Destinations</Typography>
-                </Grid>
-                <Grid style={{ display: "flex" ,margin:24,alignItems:"center"}}>
-                    <PermPhoneMsgIcon style={{ color: "#2095AE", marginRight: 8 ,fontSize:48}} />
-                    <span style={{display:"block"}}>
-                    <Typography variant='body1' style={{ color: "#676977" }}>For information</Typography>
-                    <Typography variant='h4' style={{ color: "#676977" ,fontWeight:300}}>855 333 4444</Typography>
-                    </span>
-                    
-                </Grid>
-            </div>
+            {location.pathname === "/about" &&
+                <div style={{ display: "block" }}>
+                    <Grid style={{ display: "flex", marginBottom: 16 }}>
+                        <CheckCircleIcon style={{ color: "#2095AE", marginRight: 8 }} />
+                        <Typography style={{ color: "#676977" }}>20 Years of Experience</Typography>
+                    </Grid>
+                    <Grid style={{ display: "flex" }}>
+                        <CheckCircleIcon style={{ color: "#2095AE", marginRight: 8 }} />
+                        <Typography style={{ color: "#676977" }}>150+ Tour Destinations</Typography>
+                    </Grid>
+                    <Grid style={{ display: "flex", margin: 24, alignItems: "center" }}>
+                        <PermPhoneMsgIcon style={{ color: "#2095AE", marginRight: 8, fontSize: 48 }} />
+                        <span style={{ display: "block" }}>
+                            <Typography variant='body1' style={{ color: "#676977" }}>For information</Typography>
+                            <Typography variant='h4' style={{ color: "#676977", fontWeight: 300 }}>855 333 4444</Typography>
+                        </span>
 
+                    </Grid>
+                </div>
+            }
         </Grid>
     )
 }

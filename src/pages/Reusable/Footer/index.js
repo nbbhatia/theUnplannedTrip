@@ -23,7 +23,7 @@ function Footer() {
       item
       container
       justifyContent="center"
-      style={{ background: "#2095AE",  padding: 32 }}
+      style={{ background: "#0f2454",  padding: 32 }}
     >
       <Grid md={3} item style={{ alignContent: "center", display: "grid" }}>
         <div style={{ display: "flex" }}>
@@ -39,7 +39,7 @@ function Footer() {
               color: textColor,
               fontSize: 20,
               fontWeight: "bold",
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
             }}
           >
             TheUnplannedTrip
@@ -50,7 +50,7 @@ function Footer() {
           style={{
             color: textColor,
             fontSize: 16,
-            fontFamily: "Dancing Script ,cursive",
+            fontFamily:"monospace",
             marginTop: 8,
           }}
         >
@@ -63,7 +63,7 @@ function Footer() {
               color: textColor,
               fontSize: 20,
               fontWeight: "bold",
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               marginTop: 0,
             }}
           >
@@ -111,7 +111,7 @@ function Footer() {
             color: textColor,
             fontSize: 20,
             fontWeight: "bold",
-            fontFamily: "Dancing Script ,cursive",
+            fontFamily:"monospace",
           }}
         >
           Contact Us
@@ -131,7 +131,7 @@ function Footer() {
               style={{
                 color: textColor,
                 fontSize: 14,
-                fontFamily: "Dancing Script ,cursive",
+                fontFamily:"monospace",
                 marginTop: 0,
               }}
             >
@@ -152,7 +152,7 @@ function Footer() {
               style={{
                 color: textColor,
                 fontSize: 14,
-                fontFamily: "Dancing Script ,cursive",
+                fontFamily:"monospace",
                 marginTop: 0,
               }}
             >
@@ -174,7 +174,7 @@ function Footer() {
               style={{
                 color: textColor,
                 fontSize: 14,
-                fontFamily: "Dancing Script ,cursive",
+                fontFamily:"monospace",
                 marginTop: 0,
               }}
             >
@@ -199,7 +199,7 @@ function Footer() {
             color: textColor,
             fontSize: 20,
             fontWeight: "bold",
-            fontFamily: "Dancing Script ,cursive",
+            fontFamily:"monospace",
           }}
         >
           Support
@@ -210,7 +210,7 @@ function Footer() {
             style={{
               color: textColor,
               fontSize: 14,
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               margin: "16px 0",
               fontWeight: "bold",
             }}
@@ -221,7 +221,7 @@ function Footer() {
             style={{
               color: textColor,
               fontSize: 14,
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               margin: "16px 0",
               fontWeight: "bold",
             }}
@@ -232,7 +232,7 @@ function Footer() {
             style={{
               color: textColor,
               fontSize: 14,
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               margin: "16px 0",
               fontWeight: "bold",
             }}
@@ -243,7 +243,7 @@ function Footer() {
             style={{
               color: textColor,
               fontSize: 14,
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               margin: "16px 0",
               fontWeight: "bold",
             }}
@@ -254,7 +254,7 @@ function Footer() {
             style={{
               color: textColor,
               fontSize: 14,
-              fontFamily: "Dancing Script ,cursive",
+              fontFamily:"monospace",
               margin: "16px 0",
               fontWeight: "bold",
             }}
@@ -277,7 +277,7 @@ function Footer() {
             color: textColor,
             fontSize: 20,
             fontWeight: "bold",
-            fontFamily: "Dancing Script ,cursive",
+            fontFamily:"monospace",
           }}
         >
           We Accepts
