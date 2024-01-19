@@ -114,7 +114,7 @@ const MostPopularPackages = () => {
         </Typography>
       </div>
       <div style={{ background: "#2095AE", height: "100%",padding:48 }}>
-      <Carousel responsive={responsive}>
+      <Carousel showThumbs={false} responsive={responsive}>
             {Cards.map((card, index) => (
               <div key={index}>
                 <PackageCards title={card.title} packgImage={card.image} price={card.price} />

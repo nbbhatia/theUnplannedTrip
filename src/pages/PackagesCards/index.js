@@ -5,6 +5,7 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import { Box, Rating, Typography } from "@mui/material";
 import "./card.css"
+import Link from "next/link";
 
 export default function BasicCard(props) {
   let { title, packgImage, price, isDestinationCard, isSubDestinations } = props
@@ -12,7 +13,7 @@ export default function BasicCard(props) {
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
       <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0 }}>
-        <a href="/cityWiseDestinations" className="href-link" style={{ position: "relative", }}>
+       <Link href="/cityWiseDestinations" className="href-link" style={{ position: "relative", }}>
           <img
             src={packgImage?.src}
             alt="package-image"
@@ -22,12 +23,12 @@ export default function BasicCard(props) {
 
          
 
-        </a>
+       </Link>
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
-            <a href="/cityWiseDestinations" className="href-link">
+           <Link href="/cityWiseDestinations" className="href-link">
               <Typography level="title-lg">{title}</Typography>
-            </a>
+           </Link>
 
             <Typography fontSize="lg" fontWeight="lg" style={{ color: "#fff" }}>
               Rs.{price} k
@@ -36,9 +37,9 @@ export default function BasicCard(props) {
         }
         {!isDestinationCard &&
           <div style={{ padding: 16 }}>
-            <a href="/cityWiseDestinations" className="href-link">
+           <Link href="/cityWiseDestinations" className="href-link">
               <Typography level="title-lg" style={{color:"#000"}}>{title}</Typography>
-            </a>
+           </Link>
           
    
             {location.pathname !== "/subDestinations" ?
@@ -54,7 +55,7 @@ export default function BasicCard(props) {
                   aria-label="Explore Bahamas Islands"
                   sx={{ ml: "auto", alignSelf: "center", fontWeight: 600 }}
                 >
-                  <a href={isSubDestinations && "/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> Explore</a>
+                 <Link href={"/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> Explore</Link>
                 </Button>
               </CardContent>
               : <div>

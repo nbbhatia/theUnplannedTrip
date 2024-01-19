@@ -11,6 +11,7 @@ import PkgeImage5 from "../../Assets/images/p-5.png";
 import PkgeImage6 from "../../Assets/images/p-6.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./index.css";
+import Link from "next/link";
 
 const destinations = () => {
   let arrayOfDestinations = [
@@ -83,7 +84,7 @@ const destinations = () => {
                   style={{ height: 300, width: "100%", objectFit: "cover" }}
                   priority
                 />
-                <a href={"/subDestinations"} style={{ color: "#fff" }}>
+                <Link href={"/subDestinations"} style={{ color: "#fff" }}>
                   <div
                     style={{
                       position: "absolute",
@@ -102,7 +103,7 @@ const destinations = () => {
                       </Typography>
                     </span>
                   </div>
-                </a>
+                </Link>
               </div>
             </Item>
           </Grid>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Image from "next/image";
 import { color_styling } from "../../../Assets/color";
 import Logo from "../../../Assets/images/logo.jpeg";
@@ -7,7 +9,7 @@ import "./header.css";
 
 const Home = () => {
   const { backgroundColor, textColor } = color_styling;
-
+  // const router = useRouter()
   const [scrollYPosition, setScrollYPosition] = useState(0);
 
   let linksArray = [
@@ -71,11 +73,14 @@ const Home = () => {
             <li
               key={index}
               className="router_link"
-              style={{ listStyle: "none", margin: 16 }}
+              style={{ listStyle: "none", margin: 16, color: "#fff", cursor: "pointer" }}
+              // onClick={() => router.push(link.url)}
             >
-              <a href={link.url} className="href-link">
-                {link.title}
-              </a>
+              <Link href={link.url} className="href-link">  {link.title}</Link>
+              {/* <a href={link.url} className="href-link">
+              
+              </a> */}
+
             </li>
           ))}
         </ul>

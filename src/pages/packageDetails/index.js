@@ -22,7 +22,7 @@ import BGImage from "../../Assets/images/p-4.png";
 import Layout from '../page';
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import ImageCarousel from "../Reusable/ImageCarousel";
+// import ImageCarousel from "../Reusable/ImageCarousel";
 import Accordian from "../Reusable/Accordian";
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import Form from "../Reusable/FormContainer"

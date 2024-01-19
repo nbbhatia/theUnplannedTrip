@@ -8,6 +8,7 @@ import Gangotri from "../../Assets/images/charDham/gangotri.jpeg";
 import ChardhamImage from "../../Assets/images/charDham/chardham.jpeg";
 import Image from "next/image";
 import { Button, Typography } from '@mui/material';
+import Link from 'next/link';
 
 
 
@@ -53,7 +54,7 @@ export const CharDhamYatra = () => {
         <div>
             <div style={{ display: "block", padding: 52 }}>
                 <Typography variant="h3" style={{ color: "#2095AE" }}>
-                    <span style={{ color: "#0f2454", fontWeight: "bold" ,fontFamily:"monospace"}}>
+                    <span style={{ color: "#0f2454", fontWeight: "bold", fontFamily: "monospace" }}>
                         Char Dham
                     </span> Yatra
                 </Typography>
@@ -103,16 +104,17 @@ export const CharDhamYatra = () => {
                                     position: "absolute",
                                     bottom: 100
                                 }}>
-                                    <Typography variant="h3" style={{ fontWeight: 700,fontFamily:"monospace",letterSpacing:"20px" }}>
+                                    <Typography variant="h3" style={{ fontWeight: 700, fontFamily: "monospace", letterSpacing: "20px" }}>
                                         {item.title}
                                     </Typography>
-                                    <Typography style={{ color: "#fff", fontSize: 24,fontFamily:"monospace",letterSpacing:"normal" ,padding:24}}>{item.text}</Typography>
+                                    <Typography style={{ color: "#fff", fontSize: 24, fontFamily: "monospace", letterSpacing: "normal", padding: 24 }}>{item.text}</Typography>
                                     <Button
                                         variant="contained"
                                         size="md"
-                                       sx={{ ml: "auto", alignSelf: "center", fontWeight: 600,background:"#2095AE",margin:"24px 0" }}
+                                        sx={{ ml: "auto", alignSelf: "center", fontWeight: 600, background: "#2095AE", margin: "24px 0" }}
                                     >
-                                        <a href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</a>
+                                        <Link href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</Link>
+                                        {/* <a href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</a> */}
                                     </Button>
                                 </div>
 

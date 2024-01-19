@@ -12,6 +12,7 @@ import TravelImage1 from "../../../Assets/images/travel1.jpg";
 import Image from 'next/image';
 import { Grid } from '@mui/material';
 import DoneIcon from '@mui/icons-material/Done';
+import Link from 'next/link';
 
 export default function MediaControlCard(props) {
     let { title, packgImage, price, isDestinationCard, isSubDestinations, aboutTour } = props;
@@ -58,7 +59,7 @@ export default function MediaControlCard(props) {
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between", margin: "16px 0" }}>
                             <Button variant="contained" style={{background:"#0f2454",textDecoration:"none"}}>
-                                <a href={"/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> View Details</a>
+                                <Link href={"/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> View Details</Link>
                             </Button>
                         </div>
 
