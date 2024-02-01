@@ -1,9 +1,8 @@
-import { useState } from 'react';
-
+import { useState,useRef } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Grid, TextField } from '@mui/material';
-
+import emailjs from '@emailjs/browser';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const FormikForm = (props) => {
@@ -11,6 +10,7 @@ const FormikForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
     const [value, setValues] = useState();
     const { formValues, buttonText } = props;
+    const formRef=useRef();
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -30,18 +30,30 @@ const FormikForm = (props) => {
             message: yup.string().trim().required('Message is required'),
         }),
     });
-    const handleChange = (e) => {
-        console.log(e.target.value)
-        setValues(e.target.value)
-    }
+    // const handleChange = (e) => {
+    //     console.log(e.target.value)
+    //     setValues(e.target.value)
+    // }
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_9igm1c5', 'template_mi8cqvf', formRef.current, 'IaOknXlgPlATUlXvn')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+      };
 
     return (
         <Grid md={12} xs={12} sm={12} item container>
 
-            <form style={{ width: "100%" }} onSubmit={formik.handleSubmit}>
+            <form ref={formRef} style={{ width: "100%" }} onSubmit={sendEmail}>
                 {formValues?.map((formFeild, index) =>
                 (
                     <div key={index} style={{ display: "block", margin: 16 }}>
+                    {/* {console.log("formFeild",formFeild)} */}
                         <TextField
                             style={{ width: "100%" }}
                             name={formFeild.name}
