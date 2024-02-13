@@ -11,9 +11,10 @@ import BhimAppImage from "../../../Assets/images/bhim.png";
 import MasterCard from "../../../Assets/images/masterCard.png";
 import VisaCard from "../../../Assets/images/visa.jpg";
 import Image from "next/image";
+import style from "./style.module.css"
 
 function Footer() {
-  const { backgroundColor, secondaryTextColor, textColor } =
+  const { backgroundColor, secondaryTextColor, textColor, footerBg2 } =
     color_styling;
   return (
     <Grid
@@ -23,9 +24,9 @@ function Footer() {
       item
       container
       justifyContent="center"
-      style={{ background: "#0f2454",  padding: 32 }}
+      style={{ background: footerBg2, padding: 32 }}
     >
-      <Grid md={3} item style={{ alignContent: "center", display: "grid" }}>
+      <Grid md={6} item style={{ alignContent: "center", display: "grid" }}>
         <div style={{ display: "flex" }}>
           <AddLocationIcon
             style={{
@@ -34,66 +35,23 @@ function Footer() {
               fontWeight: "bold",
             }}
           />
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 20,
-              fontWeight: "bold",
-              fontFamily:"monospace",
-            }}
-          >
+          <Typography className={[style.text, style.font24]}>
             TheUnplannedTrip
           </Typography>
         </div>
 
-        <Typography
-          style={{
-            color: textColor,
-            fontSize: 16,
-            fontFamily:"monospace",
-            marginTop: 8,
-          }}
-        >
+        <Typography className={[style.text, style.font16]}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
           maxime aut ut voluptate dolorum nisi ducimus ratione
         </Typography>
         <div style={{ display: "block" }}>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 20,
-              fontWeight: "bold",
-              fontFamily:"monospace",
-              marginTop: 0,
-            }}
-          >
+          <Typography className={[style.text, style.font18]} >
             Follow Us:
           </Typography>
           <div style={{ display: "flex" }}>
-            <InstagramIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 16px 8px 0",
-              }}
-            />
-            <TwitterIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 8px 8px 16px",
-              }}
-            />
-            <GoogleIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 8px 8px 16px",
-              }}
-            />
+            <InstagramIcon className={[style.icons, style.insta]} />
+            <TwitterIcon className={[style.icons, style.TwitterIcon]} />
+            <GoogleIcon className={[style.icons, style.TwitterIcon]} />
           </div>
         </div>
       </Grid>
@@ -106,78 +64,29 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <Typography
-          style={{
-            color: textColor,
-            fontSize: 20,
-            fontWeight: "bold",
-            fontFamily:"monospace",
-          }}
-        >
+        <Typography className={[style.text, style.font18]} >
           Contact Us
         </Typography>
 
         <div style={{ display: "block" }}>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <LocalPhoneIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 16px 8px 0",
-              }}
-            />
-            <Typography
-              style={{
-                color: textColor,
-                fontSize: 14,
-                fontFamily:"monospace",
-                marginTop: 0,
-              }}
-            >
+            <LocalPhoneIcon className={[style.icons, style.insta]} />
+            <Typography className={[style.text, style.font16]}>
               +01852-1265122 <br />
               +01852-1265122
             </Typography>
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <EmailIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 16px 8px 0",
-              }}
-            />
-            <Typography
-              style={{
-                color: textColor,
-                fontSize: 14,
-                fontFamily:"monospace",
-                marginTop: 0,
-              }}
-            >
+            <EmailIcon className={[style.icons, style.insta]} />
+            <Typography className={[style.text, style.font14]} >
               info@example.com
               <br />
               support@example.com
             </Typography>
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <AddLocationIcon
-              style={{
-                color: "#fff",
-                fontSize: 24,
-                fontWeight: "bold",
-                margin: "8px 16px 8px 0",
-              }}
-            />
-            <Typography
-              style={{
-                color: textColor,
-                fontSize: 14,
-                fontFamily:"monospace",
-                marginTop: 0,
-              }}
-            >
+            <AddLocationIcon className={[style.icons, style.insta]} />
+            <Typography className={[style.text, style.font14]}>
               2752 Willison Street
               <br />
               Eagan, United State
@@ -194,76 +103,29 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <Typography
-          style={{
-            color: textColor,
-            fontSize: 20,
-            fontWeight: "bold",
-            fontFamily:"monospace",
-          }}
-        >
+        <Typography className={[style.text, style.font18]}>
           Support
         </Typography>
 
         <div style={{ display: "block" }}>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 14,
-              fontFamily:"monospace",
-              margin: "16px 0",
-              fontWeight: "bold",
-            }}
-          >
+          <Typography className={[style.text, style.font14_2]}>
             Contact Us
           </Typography>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 14,
-              fontFamily:"monospace",
-              margin: "16px 0",
-              fontWeight: "bold",
-            }}
-          >
+          <Typography className={[style.text, style.font14_2]}>
             About Us
           </Typography>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 14,
-              fontFamily:"monospace",
-              margin: "16px 0",
-              fontWeight: "bold",
-            }}
-          >
+          <Typography className={[style.text, style.font14_2]}>
             Contact Us
           </Typography>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 14,
-              fontFamily:"monospace",
-              margin: "16px 0",
-              fontWeight: "bold",
-            }}
-          >
+          <Typography className={[style.text, style.font14_2]} >
             Services
           </Typography>
-          <Typography
-            style={{
-              color: textColor,
-              fontSize: 14,
-              fontFamily:"monospace",
-              margin: "16px 0",
-              fontWeight: "bold",
-            }}
-          >
+          <Typography className={[style.text, style.font14_2]} >
             Terms and Conditions
           </Typography>
         </div>
       </Grid>
-      <Grid
+      {/* <Grid
         md={3}
         item
         style={{
@@ -277,7 +139,7 @@ function Footer() {
             color: textColor,
             fontSize: 20,
             fontWeight: "bold",
-            fontFamily:"monospace",
+            fontFamily: "monospace",
           }}
         >
           We Accepts
@@ -292,7 +154,7 @@ function Footer() {
               objectFit: "cover",
               width: "70px",
               borderRadius: 16,
-              margin:"16px 0px"
+              margin: "16px 0px"
             }}
           />
 
@@ -304,7 +166,7 @@ function Footer() {
               objectFit: "cover",
               width: "150px",
               borderRadius: 16,
-              margin:"16px 16px"
+              margin: "16px 16px"
             }}
           />
           <Image
@@ -315,11 +177,11 @@ function Footer() {
               objectFit: "cover",
               width: "100px",
               borderRadius: 16,
-              margin:"16px 8px"
+              margin: "16px 8px"
             }}
           />
         </div>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

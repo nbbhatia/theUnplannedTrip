@@ -1,0 +1,42 @@
+.text {
+    color: #fff;
+    /* letter-spacing: 10px; */
+    font-size: 16px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.font24 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.font18{
+    font-size: 24px;
+}
+
+.font14{
+    font-size: 14px;
+}
+.font14_2{
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+.font16 {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.icons {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+.insta{
+    margin: 8px 8px 8px 0;
+}
+
+.TwitterIcon{
+    margin: 8px 8px 8px 16px;
+}

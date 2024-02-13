@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../page";
 import Image from "next/image";
-
 import BGImage from "../../Assets/images/destBg.jpg";
 import Destinations from "./destinations";
 import BasicBreadcrumbs from "../Reusable/BreadCrumbs";

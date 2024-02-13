@@ -1,0 +1,49 @@
+.gradientImage:hover {
+
+  background-image: linear-gradient(to right top, #2525a7, #222299, #1f1f8b, #1c1c7d, #191970);
+
+  transition: 1s;
+
+}
+
+.gradientImage {
+  border-radius: 5px;
+}
+
+.hotelName {
+  color: #0f2454;
+  /* letter-spacing: 10px; */
+  font-weight: bold;
+  font-size: 16px;
+  font-family: '__Montserrat_Alternates_78917f';
+  z-index: 1;
+}
+
+.price {
+  color: #0f2454;
+  /* letter-spacing: 10px; */
+  font-weight: bold;
+  font-size: 16px;
+  font-family: '__Montserrat_Alternates_78917f';
+  z-index: 1;
+}
+
+.btnText {
+  color: #fff;
+  font-size: 16px;
+  font-family: '__Montserrat_Alternates_78917f';
+  z-index: 1;
+  text-decoration: none;
+}
+
+.perNight {
+  font-size: 12px;
+  color: #0f2454;
+  font-family: '__Montserrat_Alternates_78917f';
+}
+.cardSubText{
+  color: #0f2454;
+  font-size: 12px;
+  font-family: '__Montserrat_Alternates_78917f';
+  z-index: 1;
+}

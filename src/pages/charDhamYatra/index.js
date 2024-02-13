@@ -9,6 +9,7 @@ import ChardhamImage from "../../Assets/images/charDham/chardham.jpeg";
 import Image from "next/image";
 import { Button, Typography } from '@mui/material';
 import Link from 'next/link';
+import style from "./style.module.css"
 
 
 
@@ -53,10 +54,10 @@ export const CharDhamYatra = () => {
     return (
         <div>
             <div style={{ display: "block", padding: 52 }}>
-                <Typography variant="h3" style={{ color: "#2095AE" }}>
-                    <span style={{ color: "#0f2454", fontWeight: "bold", fontFamily: "monospace" }}>
-                        Char Dham
-                    </span> Yatra
+                <Typography variant="h3" className={style.heading}>
+                    Char Dham  <span className={style.uniqueText}>
+                        Yatra
+                    </span>
                 </Typography>
             </div>
 
@@ -104,13 +105,14 @@ export const CharDhamYatra = () => {
                                     position: "absolute",
                                     bottom: 100
                                 }}>
-                                    <Typography variant="h3" style={{ fontWeight: 700, fontFamily: "monospace", letterSpacing: "20px" }}>
+                                    <Typography className={style.heading_text}>
                                         {item.title}
                                     </Typography>
-                                    <Typography style={{ color: "#fff", fontSize: 24, fontFamily: "monospace", letterSpacing: "normal", padding: 24 }}>{item.text}</Typography>
+                                    <Typography className={style.subheading_text}>{item.text}</Typography>
                                     <Button
                                         variant="contained"
                                         size="md"
+                                        className={style.viewPackageText}
                                         sx={{ ml: "auto", alignSelf: "center", fontWeight: 600, background: "#2095AE", margin: "24px 0" }}
                                     >
                                         <Link href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</Link>

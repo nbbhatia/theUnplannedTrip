@@ -1,0 +1,22 @@
+.heading {
+    color: #2095AE;
+    /* letter-spacing: 10px; */
+    font-weight: bold;
+    font-size: 24px;
+    font-family: '__Montserrat_Alternates_78917f';
+    z-index: 1;
+}
+
+.subHeading {
+    color: #0f2454;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.uniqueText {
+    color: #2095AE;
+    font-weight: "bold";
+    font-family: '__Montserrat_Alternates_78917f';
+}

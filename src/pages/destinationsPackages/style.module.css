@@ -1,0 +1,98 @@
+/* .destinationImage {
+    height: 300px;
+    widtH: 300px;
+    border: 1px solid black;
+    position: relative;
+    background-image: url("http://placekitten.com/g/300/300");
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
+.destinationImage:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    transition: height 0.5s ease-out;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    cursor: pointer;
+} */
+
+/* .destinationImage:hover:before {
+    height: 100%;
+} */
+
+.heading {
+    color: #2095AE;
+    /* letter-spacing: 10px; */
+    font-weight: bold;
+    font-size: 24px;
+    font-family: '__Montserrat_Alternates_78917f';
+    z-index: 1;
+}
+
+.subHeading {
+    color: #0f2454;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.uniqueText {
+    color: #2095AE;
+    font-weight: "bold";
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.destinationName {
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.noOfTour {
+    /* letter-spacing: 5px;
+    font-weight: bold; */
+    font-size: 16px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.destinationImage_div {
+    width: 100%;
+    position: relative;
+}
+
+.destinationImage {
+    height: 99%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.destination_image {
+    height: 300px;
+    width: 100%;
+    object-fit: "cover";
+    border-radius: 16px;
+}
+
+.image_text {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+    padding: 10px;
+}

@@ -4,7 +4,7 @@ import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import { Box, Rating, Typography } from "@mui/material";
-import "./card.css"
+import style from "./style.module.css"
 import Link from "next/link";
 
 export default function BasicCard(props) {
@@ -13,22 +13,22 @@ export default function BasicCard(props) {
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
       <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0 }}>
-       <Link href="/cityWiseDestinations" className="href-link" style={{ position: "relative", }}>
+        <Link href="/cityWiseDestinations" className="href-link" style={{ position: "relative", }}>
           <img
             src={packgImage?.src}
             alt="package-image"
-            className="gradient-image"
-            style={{ height: !isDestinationCard ? "200px" : 330, width: "100%", borderRadius: "7px 7px 0 0", objectFit: "cover" }}
+            className={style.gradientImage}
+            style={{ height: !isDestinationCard ? 200 : 330, width: "100%", borderRadius: "7px 7px 0 0", objectFit: "cover" }}
           />
 
-         
 
-       </Link>
+
+        </Link>
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
-           <Link href="/cityWiseDestinations" className="href-link">
-              <Typography level="title-lg">{title}</Typography>
-           </Link>
+            <Link href="/cityWiseDestinations" className="href-link">
+              <Typography level="title-lg" className={style.hotelName}>{title}</Typography>
+            </Link>
 
             <Typography fontSize="lg" fontWeight="lg" style={{ color: "#fff" }}>
               Rs.{price} k
@@ -36,18 +36,18 @@ export default function BasicCard(props) {
           </div>
         }
         {!isDestinationCard &&
-          <div style={{ padding: 16 }}>
-           <Link href="/cityWiseDestinations" className="href-link">
-              <Typography level="title-lg" style={{color:"#000"}}>{title}</Typography>
-           </Link>
-          
-   
+          <div style={{ padding: 8 }}>
+            <Link href="/cityWiseDestinations" className="href-link">
+              <Typography level="title-lg" className={style.hotelName} >{title}</Typography>
+            </Link>
+
+
             {location.pathname !== "/subDestinations" ?
               <CardContent orientation="horizontal">
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <Typography level="body-xs">Total price: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
+                  <Typography level="body-xs" className={style.price}>Rs.{price} <span className={style.perNight}>per night</span></Typography>
                 </div>
-               
+
                 <Button
                   variant="solid"
                   size="md"
@@ -55,17 +55,17 @@ export default function BasicCard(props) {
                   aria-label="Explore Bahamas Islands"
                   sx={{ ml: "auto", alignSelf: "center", fontWeight: 600 }}
                 >
-                 <Link href={"/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> Explore</Link>
+                  <Link href={"/packageDetails"} className={style.btnText}> Explore</Link>
                 </Button>
               </CardContent>
               : <div>
-                <Typography level="body-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Typography>
-               
+                <Typography level="body-xs" className={style.cardSubText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Typography>
+
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <Typography variant="body1" style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Total Tour: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>5+</span></Typography>
+                  <Typography variant="body1" className={style.perNight} style={{ fontWeight: "bold" }}>Total Tour: <span className={style.perNight} style={{ fontWeight: "bold" }}>5+</span></Typography>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <Typography level="body-xs">Starting price per person: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
+                  <Typography level="body-xs" className={style.perNight} >Starting price per person: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
                 </div>
                 <Rating name="read-only" value={4} readOnly />
               </div>

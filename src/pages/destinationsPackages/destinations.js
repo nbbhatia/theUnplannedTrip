@@ -3,43 +3,43 @@ import { styled } from "@mui/material/styles";
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Paper from "@mui/material/Paper";
-import PkgeImage1 from "../../Assets/images/p-1.png";
+import PkgeImage1 from "../../Assets/images/imagesofharidwar/haridwar6.jpg";
 import PkgeImage2 from "../../Assets/images/p-2.png";
 import PkgeImage3 from "../../Assets/images/p-3.png";
 import PkgeImage4 from "../../Assets/images/p-4.png";
 import PkgeImage5 from "../../Assets/images/p-5.png";
 import PkgeImage6 from "../../Assets/images/p-6.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "./index.css";
 import Link from "next/link";
+import style from "./style.module.css"
 
 const destinations = () => {
   let arrayOfDestinations = [
-    { packageName: "Uttarakhand", imageUrl: PkgeImage6, gridValue: 8, NoOfTours: 5 },
+    { packageName: "Haridwar", imageUrl: PkgeImage1, gridValue: 6, NoOfTours: 5 },
     {
-      packageName: "Himachal Pardesh",
+      packageName: "Rishikesh",
       imageUrl: PkgeImage2,
-      gridValue: 4,
+      gridValue: 6,
       NoOfTours: 7,
     },
     {
-      packageName: "Punjab",
+      packageName: "Massorie",
       imageUrl: PkgeImage3,
-      gridValue: 4,
+      gridValue: 6,
       NoOfTours: 4,
     },
     {
-      packageName: "Delhi",
+      packageName: "Dehradun",
       imageUrl: PkgeImage4,
-      gridValue: 4,
+      gridValue: 6,
       NoOfTours: 4,
     },
-    {
-      packageName: "Haryana",
-      imageUrl: PkgeImage5,
-      gridValue: 4,
-      NoOfTours: 4,
-    },
+    // {
+    //   packageName: "Haryana",
+    //   imageUrl: PkgeImage5,
+    //   gridValue: 4,
+    //   NoOfTours: 4,
+    // },
     // {
     //   packageName: "Dehradun",
     //   imageUrl: PkgeImage6,
@@ -57,11 +57,11 @@ const destinations = () => {
     <div style={{ display: "block", padding: 48 }}>
 
       <div style={{ display: "block", paddingBottom: 24 }}>
-        <Typography variant="body1" style={{ color: "#2095AE", letterSpacing: 10 }}>
+        <Typography className={style.heading}>
           Top Destinations
         </Typography>
-        <Typography variant="h4" style={{ color: "#2095AE" }}>
-          <span style={{ color: "#0f2454", fontWeight: "bold" }}>
+        <Typography variant="h4" className={style.subHeading}  >
+          <span className={style.uniqueText} >
             Popular
           </span> Destinations
         </Typography>
@@ -73,39 +73,30 @@ const destinations = () => {
 
         {arrayOfDestinations.map((item, key) => (
           <Grid item md={item.gridValue} key={key}>
-            <Item>
-              <div class="destinationImage">
-
-
-
+            <Link href={"/subDestinations"}>
+              <div className={style.destinationImage_div}>
+                <div className={style.destinationImage} />
                 <Image
                   src={item.imageUrl}
                   alt="Vercel Logo"
-                  style={{ height: 300, width: "100%", objectFit: "cover" }}
+                  className={style.destination_image}
                   priority
                 />
-                <Link href={"/subDestinations"} style={{ color: "#fff" }}>
-                  <div
-                    style={{
-                      position: "absolute",
-                      display: "flex",
-                      right: 30,
-                      bottom: 30,
-                      color: "#fff",
-                      alignItems: "center",
-                    }}
-                  >
-                    <LocationOnIcon style={{ fontSize: 55 }} />
-                    <span style={{ display: "block" }}>
-                      <Typography variant="h4">{item.packageName}</Typography>
-                      <Typography variant="body2" style={{ float: "right" }}>
-                        {item.NoOfTours} Tours
-                      </Typography>
-                    </span>
-                  </div>
-                </Link>
+
+                <div className={style.image_text}>
+                  <span style={{ display: "block", padding: 16 }}>
+                    <Typography variant="h2" className={style.destinationName}>{item.packageName}</Typography>
+                    <Typography variant="body2" className={style.noOfTour} >
+                      {item.NoOfTours} Tours
+                    </Typography>
+                    <Typography variant="body2" className={style.noOfTour} >
+                      Starting @ INR 500/-
+                    </Typography>
+                  </span>
+                </div>
               </div>
-            </Item>
+              {/* </Item> */}
+            </Link>
           </Grid>
         ))}
       </Grid>

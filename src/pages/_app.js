@@ -1,8 +1,10 @@
 // pages/_app.js
-import Layout from "@/pages/page";
-import { useRouter } from "next/router";
 
+import { Montserrat_Alternates } from 'next/font/google';
+
+const montserrat_font = Montserrat_Alternates({ subsets: ['latin'], weight: ['400', '700'],})
 const MyApp = ({ Component, pageProps }) => {
+  
   //   const router = useRouter();
 
   //   // Check if the current route is an authentication route
@@ -27,7 +29,7 @@ const MyApp = ({ Component, pageProps }) => {
     //   <Component {...pageProps} />
     // </div>
     // <Layout>
-      <Component {...pageProps} style={{margin:0}}/>
+      <Component className={montserrat_font.className} {...pageProps} style={{margin:0}}/>
     // </Layout>
   );
 };

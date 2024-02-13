@@ -1,0 +1,34 @@
+.right_image_div {
+    padding: 128px;
+    align-items: end;
+}
+
+.heading {
+    color: #2095AE;
+    letter-spacing: 10;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.subHeading {
+    color: #0f2454;
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 52px;
+    font-family: '__Montserrat_Alternates_78917f';
+}
+
+.worldText{
+    color: #2095AE;
+    font-weight: "bold";
+    font-family: '__Montserrat_Alternates_78917f';
+    
+}
+
+.bodyText {
+    font-size: 16px;
+    font-family: '__Montserrat_Alternates_78917f';
+    color: #676977;
+    padding-top: 8px;
+}
