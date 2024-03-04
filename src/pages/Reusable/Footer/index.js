@@ -7,10 +7,10 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
-import BhimAppImage from "../../../Assets/images/bhim.png";
-import MasterCard from "../../../Assets/images/masterCard.png";
-import VisaCard from "../../../Assets/images/visa.jpg";
-import Image from "next/image";
+// import BhimAppImage from "../../../Assets/images/bhim.png";
+// import MasterCard from "../../../Assets/images/masterCard.png";
+// import VisaCard from "../../../Assets/images/visa.jpg";
+// import Image from "next/image";
 import style from "./style.module.css"
 
 function Footer() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import MostPopularPackages from "../MostPopularPackages";
+import MostPopularPackages from "../Hotels";
 import WhyChooseUs from "../WhyChooseUs";
 // import CenterAcheivements from "../CenterAchivements";
 // import ExplorePackages from "../ExploreDestinations";

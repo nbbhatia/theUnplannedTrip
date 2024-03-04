@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import PkgeImage1 from "../../Assets/images/imagesofharidwar/haridwar6.jpg";
@@ -56,15 +56,30 @@ const destinations = () => {
   return (
     <div style={{ display: "block", padding: 48 }}>
 
-      <div style={{ display: "block", paddingBottom: 24 }}>
-        <Typography className={style.heading}>
-          Top Destinations
-        </Typography>
-        <Typography variant="h4" className={style.subHeading}  >
-          <span className={style.uniqueText} >
-            Popular
-          </span> Destinations
-        </Typography>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ display: "block", paddingBottom: 24 }}>
+          <Typography className={style.heading}>
+            Top Destinations
+          </Typography>
+          <Typography variant="h4" className={style.subHeading}  >
+            <span className={style.uniqueText} >
+              Popular
+            </span> Destinations
+          </Typography>
+        </div>
+
+        <div style={{ paddingRight: 24 }}>
+          <Button
+            variant="contained"
+            size="md"
+            className={style.viewPackageText}
+            sx={{ ml: "auto", alignSelf: "center", fontWeight: 600, background: "#2095AE", margin: "24px 0" }}
+          >
+            <Link href={"/destinationsPackages"} style={{ color: "#fff", textDecoration: "none" }}> View All Destinations</Link>
+            {/* <a href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</a> */}
+          </Button>
+        </div>
+
       </div>
 
       <Grid container spacing={2} >
@@ -86,10 +101,10 @@ const destinations = () => {
                 <div className={style.image_text}>
                   <span style={{ display: "block", padding: 16 }}>
                     <Typography variant="h2" className={style.destinationName}>{item.packageName}</Typography>
-                    <Typography variant="body2" className={style.noOfTour} >
+                    <Typography variant="body2" className={style.noOfTour}>
                       {item.NoOfTours} Tours
                     </Typography>
-                    <Typography variant="body2" className={style.noOfTour} >
+                    <Typography variant="body2" className={style.noOfTour}>
                       Starting @ INR 500/-
                     </Typography>
                   </span>

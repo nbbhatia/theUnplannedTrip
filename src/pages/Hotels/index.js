@@ -13,7 +13,7 @@ import { Typography } from "@mui/material";
 import style from "./style.module.css"
 
 const MostPopularPackages = () => {
-  let Cards = [
+  let hotels = [
     {
       title: "Hotel Anil",
       image: PkgeImage1,
@@ -81,16 +81,12 @@ const MostPopularPackages = () => {
       </div>
       <div style={{ background: "#2095AE", height: "100%",padding:48 }}>
       <Carousel showThumbs={false} responsive={responsive}>
-            {Cards.map((card, index) => (
+            {hotels.map((hotellist, index) => (
               <div key={index}>
-                <PackageCards title={card.title} packgImage={card.image} price={card.price} />
+                <PackageCards title={hotellist.title} packgImage={hotellist.image} price={hotellist.price} />
               </div>
             ))}
           </Carousel>
-        <div >
-
-         
-        </div>
       </div>
     </div>
   );
