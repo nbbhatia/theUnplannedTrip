@@ -1,6 +1,5 @@
-import React from "react";
 import PkgeImage1 from "../Assets/images/p-1.png";
-const data = [
+export const data = [
   {
     "id": 1,
     "place": "Haridwar",
@@ -418,4 +417,6 @@ considered sacred in Hinduism. it's a peaceful spot along the Ganges River.`, "i
   },
 ]
 
-export default data;
+export default {
+  data,
+}
