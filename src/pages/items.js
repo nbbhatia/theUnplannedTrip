@@ -417,4 +417,4 @@ considered sacred in Hinduism. it's a peaceful spot along the Ganges River.`, "i
   },
 ]
 
-export default data;
+export default { data };
