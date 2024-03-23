@@ -8,11 +8,11 @@ import style from "./style.module.css"
 import Link from "next/link";
 
 export default function BasicCard(props) {
-  let { title, packgImage, price, isDestinationCard, isSubDestinations } = props
+  let { title, packgImage, price, isDestinationCard, isSubDestinations, subText, numberOfTour,rating  } = props
   let location = useRouter();
   return (
     <Box sx={{ ml: 2 }} style={{ width: "100%" }}>
-      <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0 }}>
+      <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0,minHeight:380 }}>
         <Link href="/cityWiseDestinations" className="href-link" style={{ position: "relative", }}>
           <img
             src={packgImage?.src}
@@ -59,15 +59,19 @@ export default function BasicCard(props) {
                 </Button>
               </CardContent>
               : <div>
-                <Typography level="body-xs" className={style.cardSubText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Typography>
-
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <Typography variant="body1" className={style.perNight} style={{ fontWeight: "bold" }}>Total Tour: <span className={style.perNight} style={{ fontWeight: "bold" }}>5+</span></Typography>
-                </div>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <Typography level="body-xs" className={style.perNight} >Starting price per person: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
-                </div>
-                <Rating name="read-only" value={4} readOnly />
+                <Typography level="body-xs" className={style.cardSubText}>{subText}</Typography>
+                {numberOfTour &&
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <Typography variant="body1" className={style.perNight} style={{ fontWeight: "bold" }}>Total Tour: <span className={style.perNight} style={{ fontWeight: "bold" }}>5+</span></Typography>
+                  </div>}
+                {price &&
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <Typography level="body-xs" className={style.perNight} >Starting price per person: <span style={{ fontSize: 16, color: "#000", fontWeight: "bold" }}>Rs.{price} k</span></Typography>
+                  </div>
+                }
+                {rating&&
+                <Rating name="read-only" value={rating} readOnly />
+                }
               </div>
             }
           </div>

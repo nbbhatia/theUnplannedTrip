@@ -12,7 +12,6 @@ import PkgeImage6 from "../../Assets/images/p-6.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
 import style from "./style.module.css"
-
 const destinations = () => {
   let arrayOfDestinations = [
     { packageName: "Haridwar", imageUrl: PkgeImage1, gridValue: 6, NoOfTours: 5 },
@@ -23,7 +22,7 @@ const destinations = () => {
       NoOfTours: 7,
     },
     {
-      packageName: "Massorie",
+      packageName: "Mussoorie",
       imageUrl: PkgeImage3,
       gridValue: 6,
       NoOfTours: 4,
@@ -88,7 +87,15 @@ const destinations = () => {
 
         {arrayOfDestinations.map((item, key) => (
           <Grid item md={item.gridValue} key={key}>
-            <Link href={"/subDestinations"}>
+            <Link
+              href={{
+                pathname: `/subDestinations`,
+                query: {
+                  city: item.packageName,
+                }
+              }}
+            // href={`/subDestinations/${item.packageName}`}
+            >
               <div className={style.destinationImage_div}>
                 <div className={style.destinationImage} />
                 <Image

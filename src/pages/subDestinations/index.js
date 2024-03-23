@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../page";
 import Image from "next/image";
 import PackageCards from "../PackagesCards"
@@ -13,87 +13,10 @@ import style from "./style.module.css";
 import { Grid, Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import data from "../items";
+import { useRouter } from "next/router";
+
 const subDestionations = () => {
-  let arrayOfSubDestinations = [
-    { packageName: "Haridwar", imageUrl: PkgeImage6, price: 500, NoOfTours: 5 },
-    {
-      packageName: "Rishikesh",
-      imageUrl: PkgeImage2,
-      price: 500,
-      NoOfTours: 7,
-    },
-    {
-      packageName: "Dehradun",
-      imageUrl: PkgeImage3,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Almora",
-      imageUrl: PkgeImage4,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Badrinath",
-      imageUrl: PkgeImage5,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Badrinath",
-      imageUrl: PkgeImage5,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Kedarnath",
-      imageUrl: PkgeImage5,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Nainital",
-      imageUrl: PkgeImage1,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Pauri",
-      imageUrl: PkgeImage6,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Kotdwar",
-      imageUrl: PkgeImage2,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Lansdowne",
-      imageUrl: PkgeImage3,
-      price: 500,
-      NoOfTours: 4,
-    }, {
-      packageName: "Gangotri",
-      imageUrl: PkgeImage4,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "Yamnoutri",
-      imageUrl: PkgeImage5,
-      price: 500,
-      NoOfTours: 4,
-    },
-    {
-      packageName: "DevPrayag",
-      imageUrl: PkgeImage6,
-      price: 500,
-      NoOfTours: 4,
-    },
-  ];
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -114,6 +37,16 @@ const subDestionations = () => {
     },
   };
 
+let router = useRouter();
+ const { city } = router.query
+
+  const [destinationsData, setDestinationsData] = useState()
+
+  useEffect(() => {
+    data.filter((item) => item.place === city).map((dataObj) => setDestinationsData(dataObj)); // [ 2, 4, 6 ]
+  }, [city])
+
+console.log("destinationsData",destinationsData)
   return (
     <Layout style={{ margin: 0 }}>
       <Image
@@ -123,69 +56,68 @@ const subDestionations = () => {
         priority
       />
 
-      <Grid md={12} sm={12} xs={12} item container style={{ padding: 48, display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <Typography variant="h6" className={style.heading}>
-          Haridwar
-        </Typography>
-        <Typography className={style.subText}>
-          A tour of the temples in Haridwar, India, can be a spiritually enriching experience. Haridwar is
-          one of the holiest cities in India, located in the state of Uttarakhand along the banks of the sacred
-          Ganges River. It is known for its ghats, temples, and religious significance. Here&#39;s a list of some
-          of the prominent temples you can visit on a Haridwar temples tour:
-          A tour of the temples in Haridwar, India, can be a spiritually enriching experience. Haridwar is
-          one of the holiest cities in India, located in the state of Uttarakhand along the banks of the sacred
-          Ganges River. It is known for its ghats, temples, and religious significance. Here&#39;s a list of some
-          of the prominent temples you can visit on a Haridwar temples tour:
-        </Typography>
-        {/* {arrayOfSubDestinations.map((card, index) => (
-          <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-            <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} />
-          </Grid>
-        ))} */}
-
-
-        {/* </div> */}
-
+      <Grid md={12} sm={12} xs={12} item style={{ padding: 48, display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+        <div>
+          <Typography variant="h6" className={style.subHeading}>
+            {destinationsData?.place}
+          </Typography>
+          <Typography className={style.subText}>
+            {destinationsData?.text}
+          </Typography>
+        </div>
       </Grid>
 
-      <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-        <Typography variant="h6" className={style.subHeading}>
-          Attractions
-        </Typography>
-        <Carousel showThumbs={false} responsive={responsive}>
-          {arrayOfSubDestinations.map((card, index) => (
-            <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-              <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} />
-            </Grid>
-          ))}
-        </Carousel>
-      </Grid>
-      <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-        <Typography variant="h6" className={style.subHeading}>
-          Temples
-        </Typography>
-        <Carousel showThumbs={false} responsive={responsive}>
-          {arrayOfSubDestinations.map((card, index) => (
-            <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-              <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} />
-            </Grid>
-          ))}
-        </Carousel>
-      </Grid>
-      <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-        <Typography variant="h6" className={style.subHeading}>
-          Find <span className={style.uniqueText}>
-            Best places
-          </span> to stay in Haridwar
-        </Typography>
-        <Carousel showThumbs={false} responsive={responsive}>
-          {arrayOfSubDestinations.map((card, index) => (
-            <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-              <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} />
-            </Grid>
-          ))}
-        </Carousel>
-      </Grid>
+      {destinationsData?.attaractions &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
+          <Typography variant="h6" className={style.subHeading}>
+            Attaractions
+          </Typography>
+          <Typography className={style.subText}>
+            {destinationsData?.attaractionsText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.attaractions?.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} subText={card.subText}/>
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>}
+      {destinationsData?.temples &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
+          <Typography variant="h6" className={style.subHeading}>
+            Temples
+          </Typography>
+          <Typography className={style.subText}>
+            {destinationsData?.templeText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.temples?.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText}/>
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>}
+      {destinationsData?.hotels &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
+          <Typography variant="h6" className={style.subHeading}>
+            Find <span className={style.uniqueText}>
+              Best places
+            </span> to stay in Haridwar
+          </Typography>
+          <Typography className={style.subText}>
+            {destinationsData?.templeText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.hotels.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText}/>
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>
+      }
     </Layout>
   );
 }
