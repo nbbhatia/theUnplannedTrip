@@ -833,7 +833,11 @@ const data = [
     ],
   },
 ]
-export default data;
+const arrayData=()=>
+{
+  return data;
+}
+export default arrayData;
 
 
 // export default {
