@@ -416,7 +416,7 @@ import PkgeImage1 from "../Assets/images/p-1.png";
 //     ],
 //   },
 // ]
-export const data = [
+const data = [
   {
     "id": 1,
     "place": "Haridwar",
@@ -833,7 +833,7 @@ export const data = [
     ],
   },
 ]
-
+export default data;
 
 
 // export default {
