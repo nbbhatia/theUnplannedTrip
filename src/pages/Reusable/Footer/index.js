@@ -28,30 +28,46 @@ function Footer() {
     >
       <Grid md={6} item style={{ alignContent: "center", display: "grid" }}>
         <div style={{ display: "flex" }}>
-          <AddLocationIcon
-            style={{
-              color: "#fff",
-              fontSize: 24,
-              fontWeight: "bold",
-            }}
-          />
-          <Typography className={[style.text, style.font24]}>
-            TheUnplannedTrip
-          </Typography>
-        </div>
+          <span style={{
+            color: "#fff",
+            fontSize: 24,
+            fontWeight: "bold",
+          }} >
+            <AddLocationIcon />
+          </span>
 
-        <Typography className={[style.text, style.font16]}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
-          maxime aut ut voluptate dolorum nisi ducimus ratione
-        </Typography>
-        <div style={{ display: "block" }}>
-          <Typography className={[style.text, style.font18]} >
-            Follow Us:
+          <span className={[style.text, style.font24]}>
+            <Typography >
+              TheUnplannedTrip
+            </Typography>
+          </span>
+
+        </div>
+        <span className={[style.text, style.font16]}>
+          <Typography>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            maxime aut ut voluptate dolorum nisi ducimus ratione
           </Typography>
+        </span>
+
+        <div style={{ display: "block" }}>
+          <span className={[style.text, style.font18]}>
+            <Typography>
+              Follow Us:
+            </Typography>
+          </span>
+
           <div style={{ display: "flex" }}>
-            <InstagramIcon className={[style.icons, style.insta]} />
-            <TwitterIcon className={[style.icons, style.TwitterIcon]} />
-            <GoogleIcon className={[style.icons, style.TwitterIcon]} />
+            <span className={[style.icons, style.insta]}>
+              <InstagramIcon />
+            </span>
+            <span className={[style.icons, style.TwitterIcon]}>
+              <TwitterIcon />
+            </span>
+            <span className={[style.icons, style.TwitterIcon]}>
+              <GoogleIcon />
+            </span>
+
           </div>
         </div>
       </Grid>
@@ -64,33 +80,52 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <Typography className={[style.text, style.font18]} >
-          Contact Us
-        </Typography>
+        <span className={[style.text, style.font18]}>
+          <Typography>
+            Contact Us
+          </Typography>
+        </span>
+
 
         <div style={{ display: "block" }}>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <LocalPhoneIcon className={[style.icons, style.insta]} />
-            <Typography className={[style.text, style.font16]}>
-              +01852-1265122 <br />
-              +01852-1265122
-            </Typography>
+            <span className={[style.icons, style.insta]} >
+              <LocalPhoneIcon />
+            </span>
+
+            <span className={[style.text, style.font16]}>
+              <Typography>
+                +01852-1265122 <br />
+                +01852-1265122
+              </Typography>
+            </span>
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <EmailIcon className={[style.icons, style.insta]} />
-            <Typography className={[style.text, style.font14]} >
-              info@example.com
-              <br />
-              support@example.com
-            </Typography>
+            <span className={[style.icons, style.insta]}>
+              <EmailIcon />
+            </span>
+
+            <span className={[style.text, style.font14]} >
+              <Typography>
+                info@example.com
+                <br />
+                support@example.com
+              </Typography>
+            </span>
+
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <AddLocationIcon className={[style.icons, style.insta]} />
-            <Typography className={[style.text, style.font14]}>
-              2752 Willison Street
-              <br />
-              Eagan, United State
-            </Typography>
+          <span className={[style.icons, style.insta]} >
+          <AddLocationIcon />
+          </span>
+            
+            <span className={[style.text, style.font14]}>
+              <Typography>
+                2752 Willison Street
+                <br />
+                Eagan, United State
+              </Typography>
+            </span>
           </div>
         </div>
       </Grid>
@@ -103,26 +138,40 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <Typography className={[style.text, style.font18]}>
-          Support
-        </Typography>
+        <span className={[style.text, style.font18]}>
+          <Typography>
+            Support
+          </Typography>
+        </span>
+
 
         <div style={{ display: "block" }}>
-          <Typography className={[style.text, style.font14_2]}>
-            Contact Us
-          </Typography>
-          <Typography className={[style.text, style.font14_2]}>
-            About Us
-          </Typography>
-          <Typography className={[style.text, style.font14_2]}>
-            Contact Us
-          </Typography>
-          <Typography className={[style.text, style.font14_2]} >
-            Services
-          </Typography>
-          <Typography className={[style.text, style.font14_2]} >
-            Terms and Conditions
-          </Typography>
+          <span className={[style.text, style.font14_2]} >
+            <Typography>
+              Contact Us
+            </Typography>
+          </span>
+          <span className={[style.text, style.font14_2]}>
+            <Typography>
+              About Us
+            </Typography>
+          </span>
+          <span className={[style.text, style.font14_2]}>
+            <Typography>
+              Contact Us
+            </Typography>
+          </span>
+          <span className={[style.text, style.font14_2]}>
+            <Typography>
+              Services
+            </Typography>
+          </span>
+          <span className={[style.text, style.font14_2]}>
+            <Typography>
+              Terms and Conditions
+            </Typography>
+          </span>
+
         </div>
       </Grid>
       {/* <Grid
