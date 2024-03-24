@@ -13,7 +13,7 @@ import style from "./style.module.css";
 import { Grid, Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {data} from "../items";
+import data from "../items";
 import { useRouter } from "next/router";
 
 const subDestionations = () => {
