@@ -1,4 +1,4 @@
-import PkgeImage1 from "../Assets/images/p-1.png";
+import PkgeImage1 from "../src/Assets/images/BG.jpg";
 // export const data = [
 //   {
 //     "id": 1,
