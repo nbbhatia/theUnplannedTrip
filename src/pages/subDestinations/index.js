@@ -40,7 +40,7 @@ const subDestionations = () => {
 let router = useRouter();
  const { city } = router.query
 
-  const [destinationsData, setDestinationsData] = useState()
+  const [destinationsData, setDestinationsData] = useState(null)
 
   useEffect(() => {
     data.filter((item) => item.place === city).map((dataObj) => setDestinationsData(dataObj)); // [ 2, 4, 6 ]
