@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../page";
 import Image from "next/image";
-import PackageCards from "../PackagesCards"
-import BGImage from "../../Assets/images/imagesofharidwar/omPull.jpeg";
-import PkgeImage1 from "../../Assets/images/p-1.png";
-import PkgeImage2 from "../../Assets/images/p-2.png";
-import PkgeImage3 from "../../Assets/images/p-3.png";
-import PkgeImage4 from "../../Assets/images/p-4.png";
-import PkgeImage5 from "../../Assets/images/p-5.png";
-import PkgeImage6 from "../../Assets/images/p-5.png";
+import PackageCards from "../PackagesCards";
 import style from "./style.module.css";
 import { Grid, Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
@@ -46,11 +39,10 @@ let router = useRouter();
     data.filter((item) => item.place === city).map((dataObj) => setDestinationsData(dataObj)); // [ 2, 4, 6 ]
   }, [city])
 
-console.log("destinationsData",destinationsData)
   return (
     <Layout style={{ margin: 0 }}>
       <Image
-        src={BGImage}
+        src={destinationsData?.bannerImage}
         alt="Vercel Logo"
         style={{ height: "80vh", width: "100%", objectFit: "cover" }}
         priority

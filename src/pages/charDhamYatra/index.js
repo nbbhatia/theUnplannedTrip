@@ -76,6 +76,7 @@ export const CharDhamYatra = () => {
                                 height: "780px",
                                 alignItems: "center",
                                 display: "flex",
+                                position:"relative"
                             }}
                         >
                             <Image

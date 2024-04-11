@@ -11,7 +11,7 @@ import EmailIcon from "@mui/icons-material/Email";
 // import MasterCard from "../../../Assets/images/masterCard.png";
 // import VisaCard from "../../../Assets/images/visa.jpg";
 // import Image from "next/image";
-import style from "./style.module.css"
+import style from "./style.module.scss"
 
 function Footer() {
   const { backgroundColor, secondaryTextColor, textColor, footerBg2 } =
@@ -36,37 +36,26 @@ function Footer() {
             <AddLocationIcon />
           </span>
 
-          <span className={[style.text, style.font24]}>
-            <Typography >
-              TheUnplannedTrip
-            </Typography>
-          </span>
+          <Typography className={`${style.text} ${style.font24}`}>
+            TheUnplannedTrip
+          </Typography>
+
 
         </div>
-        <span className={[style.text, style.font16]}>
-          <Typography>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
-            maxime aut ut voluptate dolorum nisi ducimus ratione
-          </Typography>
-        </span>
+        <Typography className={`${style.text} ${style.font16}`}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+          maxime aut ut voluptate dolorum nisi ducimus ratione
+        </Typography>
 
         <div style={{ display: "block" }}>
-          <span className={[style.text, style.font18]}>
-            <Typography>
-              Follow Us:
-            </Typography>
-          </span>
+          <Typography className={`${style.text} ${style.font18}`}>
+            Follow Us:
+          </Typography>
 
           <div style={{ display: "flex" }}>
-            <span className={[style.icons, style.insta]}>
-              <InstagramIcon />
-            </span>
-            <span className={[style.icons, style.TwitterIcon]}>
-              <TwitterIcon />
-            </span>
-            <span className={[style.icons, style.TwitterIcon]}>
-              <GoogleIcon />
-            </span>
+            <InstagramIcon className={`${style.icons} ${style.insta}`} />
+            <TwitterIcon className={`${style.icons} ${style.TwitterIcon}`} />
+            <GoogleIcon className={`${style.icons} ${style.TwitterIcon}`} />
 
           </div>
         </div>
@@ -80,52 +69,39 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <span className={[style.text, style.font18]}>
-          <Typography>
-            Contact Us
-          </Typography>
-        </span>
+        <Typography className={`${style.text} ${style.font18}`}>
+          Contact Us
+        </Typography>
 
 
         <div style={{ display: "block" }}>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <span className={[style.icons, style.insta]} >
-              <LocalPhoneIcon />
-            </span>
+            <LocalPhoneIcon className={`${style.icons} ${style.insta}`} />
 
-            <span className={[style.text, style.font16]}>
-              <Typography>
-                +01852-1265122 <br />
-                +01852-1265122
-              </Typography>
-            </span>
+            <Typography className={`${style.text} ${style.font16}`}>
+              +01852-1265122 <br />
+              +01852-1265122
+            </Typography>
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-            <span className={[style.icons, style.insta]}>
-              <EmailIcon />
-            </span>
+            <EmailIcon className={`${style.icons} ${style.insta}`} />
 
-            <span className={[style.text, style.font14]} >
-              <Typography>
-                info@example.com
-                <br />
-                support@example.com
-              </Typography>
-            </span>
+            <Typography className={`${style.text} ${style.font14}`}>
+              info@example.com
+              <br />
+              support@example.com
+            </Typography>
 
           </div>
           <div style={{ display: "flex", margin: "16px 0" }}>
-          <span className={[style.icons, style.insta]} >
-          <AddLocationIcon />
-          </span>
-            
-            <span className={[style.text, style.font14]}>
-              <Typography>
-                2752 Willison Street
-                <br />
-                Eagan, United State
-              </Typography>
-            </span>
+            <AddLocationIcon className={`${style.icons} ${style.insta}`} />
+
+
+            <Typography className={`${style.text} ${style.font14}`}>
+              2752 Willison Street
+              <br />
+              Eagan, United State
+            </Typography>
           </div>
         </div>
       </Grid>
@@ -138,40 +114,28 @@ function Footer() {
           justifyContent: "center",
         }}
       >
-        <span className={[style.text, style.font18]}>
-          <Typography>
+        <Typography className={`${style.text} ${style.font18}`}>
             Support
           </Typography>
-        </span>
 
 
         <div style={{ display: "block" }}>
-          <span className={[style.text, style.font14_2]} >
-            <Typography>
+          
+            <Typography className={`${style.text} ${style.font14_2}`} >
               Contact Us
             </Typography>
-          </span>
-          <span className={[style.text, style.font14_2]}>
-            <Typography>
+            <Typography className={`${style.text} ${style.font14_2}`} >
               About Us
             </Typography>
-          </span>
-          <span className={[style.text, style.font14_2]}>
-            <Typography>
+            <Typography className={`${style.text} ${style.font14_2}`}>
               Contact Us
             </Typography>
-          </span>
-          <span className={[style.text, style.font14_2]}>
-            <Typography>
+            <Typography className={`${style.text} ${style.font14_2}`}>
               Services
             </Typography>
-          </span>
-          <span className={[style.text, style.font14_2]}>
-            <Typography>
+            <Typography className={`${style.text} ${style.font14_2}`}>
               Terms and Conditions
             </Typography>
-          </span>
-
         </div>
       </Grid>
       {/* <Grid
