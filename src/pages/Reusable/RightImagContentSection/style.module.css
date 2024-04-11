@@ -8,7 +8,7 @@
     letter-spacing: 10;
     font-size: 42px;
     font-weight: bold;
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
 }
 
 .subHeading {
@@ -16,19 +16,19 @@
     padding-top: 8px;
     font-weight: bold;
     font-size: 52px;
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
 }
 
 .worldText{
     color: #2095AE;
     font-weight: "bold";
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
     
 }
 
 .bodyText {
     font-size: 16px;
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
     color: #676977;
     padding-top: 8px;
 }

@@ -3,7 +3,7 @@
     /* letter-spacing: 10px; */
     font-weight: bold;
     font-size: 24px;
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
     z-index: 1;
 }
 
@@ -12,11 +12,11 @@
     letter-spacing: 10px;
     font-weight: bold;
     font-size: 24px;
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
 }
 
 .uniqueText {
     color: #2095AE;
     font-weight: "bold";
-    font-family: '__Montserrat_Alternates_78917f';
+    font-family: 'Gill Sans';
 }
