@@ -1,5 +1,5 @@
 import React from 'react';
-import style from  "@/styles/VideoCss.module.css";
+import style from  "../../VideoCss.module.css";
 import { Typography } from '@mui/material';
 
 
