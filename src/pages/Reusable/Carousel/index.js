@@ -45,7 +45,7 @@ const CarouselComponent = () => {
   return (
     <Grid md={12} xs={12} sm={12} item container justifyContent="center">
       {regionDisplay.map((region, index) => (
-        <Carousel>
+        <Carousel showThumbs={false}>
           <div>
             {/* <img src={region.url} alt="regionImage" style={{height:200,width:200}}/> */}
             <Image
