@@ -63,11 +63,12 @@
 
 .destinationImage_div {
     width: 100%;
+    height:400px;
     position: relative;
 }
 
 .destinationImage {
-    height: 99%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -76,12 +77,13 @@
     opacity: 0.6;
     z-index: 1;
     border-radius: 16px;
+    object-fit: cover;
 }
 
 .destination_image {
-    height: 300px;
+    height: 100%;
     width: 100%;
-    object-fit: "cover";
+    object-fit: cover;
     border-radius: 16px;
 }
 

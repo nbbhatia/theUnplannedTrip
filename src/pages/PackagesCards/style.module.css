@@ -8,6 +8,16 @@
 
 .gradientImage {
   border-radius: 5px;
+  background-image: linear-gradient(to right top, #2525a7, #222299, #1f1f8b, #1c1c7d, #191970);
+height:400px;
+  transition: 1s;
+}
+
+.stationTypeStyle{
+  position: absolute;
+  bottom:20px;
+  color:#fff;
+  /* color:#000 */
 }
 
 .hotelName {

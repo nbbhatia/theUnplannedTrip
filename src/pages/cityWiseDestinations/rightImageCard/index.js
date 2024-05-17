@@ -13,6 +13,7 @@ import Image from 'next/image';
 import { Grid } from '@mui/material';
 import DoneIcon from '@mui/icons-material/Done';
 import Link from 'next/link';
+import style from "./style.module.scss"
 
 export default function MediaControlCard(props) {
     let { title, packgImage, price, isDestinationCard, isSubDestinations, aboutTour } = props;
@@ -30,36 +31,40 @@ export default function MediaControlCard(props) {
                         priority
                     />
                     <div style={{ padding: 16 }}>
-                        <Typography component="div" variant="h5" style={{color:"#0f2454"}}>
+                        <Typography component="div" className={style.heading} style={{ color: "#0f2454" }}>
                             {title}
                         </Typography>
-                        <Typography component="div" variant="body2" style={{color:"#676977"}}>
+                        <Typography component="div" className={style.nightDays}>
+                            7Night , 8Days
+                        </Typography>
+                        <Typography component="div" className={style.subHeading}>
                             {aboutTour}
                         </Typography>
-                        <Typography variant="h5" style={{ marginTop: 18,color:"#2095AE" }}>
+                        <Typography className={style.price}>
                             Rs. {price} <span style={{ fontSize: 16 }}>/ per person</span>
                         </Typography>
-                        <div style={{ display: "flex" ,flexWrap:"wrap",margin:"10px 0px"}}>
+                        <div style={{ display: "flex", flexWrap: "wrap", margin: "10px 0px" }}>
                             {itemsWithPackage.map((obj, index) => (
                                 <div key={index} style={{
                                     padding: "2px 15px",
                                     borderRadius: "24px",
                                     border: "2px solid #676977",
-                                    width:"max-content",
-                                    display:"flex",
-                                    marginBottom:8,
-                                    alignItems:"center"
+                                    width: "max-content",
+                                    display: "flex",
+                                    marginBottom: 8,
+                                    alignItems: "center",
+                                    marginRight:12
                                 }}>
-                                <DoneIcon style={{fontSize:18,color:"green",marginRight:3,fontWeight:"bold"}}/>
-                                    <Typography style={{color:"#676977"}}>
+                                    <DoneIcon style={{ fontSize: 18, color: "green", marginRight: 3, fontWeight: "bold" }} />
+                                    <Typography style={{ color: "#676977" }} className={style.subHeading}>
                                         {obj}
                                     </Typography>
                                 </div>
                             ))}
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between", margin: "16px 0" }}>
-                            <Button variant="contained" style={{background:"#0f2454",textDecoration:"none"}}>
-                                <Link href={"/packageDetails"} style={{ color: "#fff", textDecoration: "none" }}> View Details</Link>
+                            <Button variant="contained" className={style.viewDetailbtn} style={{ background: "#0f2454", textDecoration: "none" }}>
+                                <Link href={"/packageDetails"}  style={{ color: "#fff", textDecoration: "none" }}> View Details</Link>
                             </Button>
                         </div>
 

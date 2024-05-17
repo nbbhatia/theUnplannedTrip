@@ -429,6 +429,347 @@ export const data = [
     },
     ],
   },
+  {
+    "id": 5,
+    "place": "Uttarakhand",
+    "bannerImage":HaridwarImage,
+    "text": `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+    // "attaractionsText": `Haridwar, located in the northern Indian state of Uttarakhand, is a sacred city known for
+    //   its rich religious and cultural heritage. It is one of the seven holiest places in Hinduism
+    //   and a popular destination for pilgrims and tourists alike. Here are some of the top
+    //   attractions in Haridwar`,
+    // "templeText": `A tour of the temples in Haridwar, India, can be a spiritually enriching experience. Haridwar is
+    //   one of the holiest cities in India, located in the state of Uttarakhand along the banks of the sacred
+    //   Ganges River. It is known for its ghats, temples, and religious significance. Here's a list of some
+    //   of the prominent temples you can visit on a Haridwar temples tour:`,
+    // "hotelText": `Haridwar is a popular pilgrimage destination in India, and it offers a range of accommodation
+    //  options to cater to the needs of the millions of tourists and pilgrims who visit the city each year.
+    //  Here are some hotels and accommodations you can consider in Haridwar:`,
+    // "imageUrl": Haridwar1,
+  //   "attaractions": [
+  //     {
+  //       packageName: "Har Ki Pauri", subText: `This is one of the most iconic places in Haridwar. It is believed to be the
+  //     spot where Lord Vishnu left his footprint, and it's where the Ganges River leaves the
+  //     mountains and enters the plains. The Ganga Aarti performed here every evening is a
+  //     must-see spectacle.`,
+  //       "imageUrl": Haridwar1,
+  //     },
+  //     {
+  //       packageName: "Mansa Devi Temple", subText: `Situated on a hill, this temple is dedicated to Goddess Mansa
+  //     Devi, and it offers panoramic views of Haridwar. You can reach the temple by a cable
+  //     car or on foot for a challenging trek.`, "imageUrl": Haridwar2,
+  //     },
+  //     {
+  //       packageName: "Chandi Devi Temple", subText: `Another hilltop temple, this one is dedicated to Goddess Chandi
+  //     Devi. You can reach it by a cable car or a steep climb. The temple offers great views of
+  //     Haridwar and the surrounding area.`, "imageUrl": Haridwar3,
+  //     },
+  //     {
+  //       packageName: "Bharat Mata Mandir", subText: `This temple is unique as it is dedicated to Mother India. It has a
+  //     map of undivided India engraved in marble. It's a symbol of patriotism and unity.`, "imageUrl": Haridwar4,
+  //     },
+  //     {
+  //       packageName: "Kumbh Mela", subText: `If you happen to visit Haridwar during the Kumbh Mela, which is held
+  //     every 12 years, it's an incredible experience. Millions of pilgrims gather to take a dip in
+  //     the holy Ganges River to cleanse their sins.`, "imageUrl": Haridwar5,
+  //     },
+  //     {
+  //       packageName: "Rajaji National Park", subText: `Located nearby, this national park offers opportunities for wildlife
+  // enthusiasts. You can go on safaris to spot tigers, elephants, leopards, and various bird
+  // species.`, "imageUrl": Haridwar6,
+  //     },
+  //     {
+  //       packageName: "Bhimgoda Kund", subText: `This is a sacred pond where it is believed that Bhima, one of the
+  //     Pandava brothers from the Mahabharata, drew water by piercing the ground with his
+  //     knee.`, "imageUrl": Haridwar7,
+  //     },
+  //     {
+  //       packageName: "Shantikunj", subText: `It is the headquarters of the All World Gayatri Pariwar and is known for its
+  // spiritual and social activities. it's a serene place for meditation and spiritual
+  // contemplation.`, "imageUrl": Haridwar8,
+  //     },
+  //     {
+  //       packageName: "Gau Ghat", subText: `This ghat is known for its significance in the worship of cows, which are
+  // considered sacred in Hinduism. it's a peaceful spot along the Ganges River.`, "imageUrl": Haridwar9,
+  //     },
+
+  //   ],
+    // "temples": [{
+    //   packageName: "Har Ki Pauri", subText: `This is one of the most famous ghats in Haridwar, and it's considered the most
+    //   sacred. While it's primarily known as a ghat, it also houses the Chandi Devi Temple and the
+    //   Mansa Devi Temple, which can be reached by cable car or on foot.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Mansa Devi Temple", subText: `This temple is dedicated to Goddess Mansa Devi, and it's situated atop a
+    //   hill called the Bilwa Parvat. Pilgrims often trek to the temple, but there's also a cable car service
+    //   available.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Chandi Devi Temple", subText: `Perched on the Neel Parvat, this temple is dedicated to Goddess Chandi
+    //   Devi. Like Mansa Devi Temple, you can reach it by cable car or on foot.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Maya Devi Temple", subText: `This temple is one of the ancient temples in Haridwar, dedicated to
+    //   Goddess Maya Devi. It is believed to be the spot where the heart and navel of Goddess Sati
+    //   (Lord Shiva's wife) fell.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Daksheshwar Mahadev Temple", subText: `This temple is dedicated to Lord Shiva and is associated with
+    //   the legend of King Daksha. It's a peaceful place for worship.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Bharat Mata Mandir", subText: `This unique temple is dedicated to Mother India and showcases a relief
+    //   map of the Indian subcontinent made of marble. It's a symbol of unity and diversity in India.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Vaishno Devi Temple", subText: `This temple is a replica of the famous Vaishno Devi Temple in Jammu
+    //   and Kashmir. It's a popular pilgrimage spot for devotees of Goddess Vaishno Devi.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Bhimgoda Tank", subText: `Although not a temple, this is a sacred tank where it is believed that Bhima,
+    //   one of the Pandava brothers from the Mahabharata, created it with the strike of his knee. Pilgrims
+    //   often take a dip in the holy water here.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Pawan Dham", subText: `This temple is known for its intricate glasswork and ornate design. It's dedicated
+    //   to Lord Hanuman.`, "imageUrl": PkgeImage1,
+    // },
+    // {
+    //   packageName: "Anandamayi Ma Ashram", subText: `While not exactly a temple, this ashram is associated with the
+    //   revered saint Anandamayi Ma. It's a place of spiritual reflection and meditation.`, "imageUrl": PkgeImage1,
+    // }
+    // ],
+
+
+    "hillStations": [{
+      packageName: "Chakarata", subText: `A luxurious hotel with modern amenities, Radisson Blu is
+      located near the industrial area of Haridwar and offers a comfortable stay.`,placeType:"HillStation" ,"imageUrl": Haridwar2,
+    },
+    {
+      packageName: "Nainital",placeType:"HillStation", subText: `This boutique hotel is situated right on the banks of the Ganges River, offering a
+      serene and picturesque environment. It's a great choice for those seeking a peaceful retreat.`, "imageUrl": Haridwar1,
+    },
+    {
+      packageName: "Yamnotri", subText: `A heritage hotel, The Haveli Hari Ganga offers a blend of traditional
+      architecture and modern comfort. It's conveniently located near the Har Ki Pauri Ghat.`, "imageUrl": Haridwar4,
+    },
+    {
+      packageName: "Gangotari", subText: `This mid-range hotel offers comfortable rooms and is situated close to
+      major attractions like Har Ki Pauri and Mansa Devi Temple.`, "imageUrl": Haridwar3,
+    },
+    {
+      packageName: "Almora", subText: `A budget-friendly option, Hotel Alpana provides basic amenities and is a short
+      walk from Har Ki Pauri.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Dehradun", subText: `This boutique hotel offers comfortable and stylish rooms and is located near the
+      railway station, making it a convenient choice for travelers.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Haridwar", subText: `Another budget-friendly option, Hotel Sun Shine provides clean and
+      comfortable rooms and is located near the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Rishikesh", subText: `Situated near the railway station, Hotel Godwin offers a range of rooms to suit
+      different budgets.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Massorie", subText: `This hotel provides decent accommodation options and is located near Har Ki
+      Pauri and the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Chakarata", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Corbett", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Bhimtal", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Ranikhet", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Muketshwar", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    }
+    ],
+    "visitPlaces": [{
+      packageName: "Kedarnath", subText: `A luxurious hotel with modern amenities, Radisson Blu is
+      located near the industrial area of Haridwar and offers a comfortable stay.`,placeType:"HillStation" ,"imageUrl": Haridwar2,
+    },
+    {
+      packageName: "Badrinath",placeType:"HillStation" , subText: `This boutique hotel is situated right on the banks of the Ganges River, offering a
+      serene and picturesque environment. It's a great choice for those seeking a peaceful retreat.`, "imageUrl": Haridwar1,
+    },
+    {
+      packageName: "Yamnotri", subText: `A heritage hotel, The Haveli Hari Ganga offers a blend of traditional
+      architecture and modern comfort. It's conveniently located near the Har Ki Pauri Ghat.`, "imageUrl": Haridwar4,
+    },
+    {
+      packageName: "Gangotari", subText: `This mid-range hotel offers comfortable rooms and is situated close to
+      major attractions like Har Ki Pauri and Mansa Devi Temple.`, "imageUrl": Haridwar3,
+    },
+    {
+      packageName: "Almora", subText: `A budget-friendly option, Hotel Alpana provides basic amenities and is a short
+      walk from Har Ki Pauri.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Dehradun", subText: `This boutique hotel offers comfortable and stylish rooms and is located near the
+      railway station, making it a convenient choice for travelers.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Haridwar", subText: `Another budget-friendly option, Hotel Sun Shine provides clean and
+      comfortable rooms and is located near the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Rishikesh", subText: `Situated near the railway station, Hotel Godwin offers a range of rooms to suit
+      different budgets.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Massorie", subText: `This hotel provides decent accommodation options and is located near Har Ki
+      Pauri and the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Chakarata", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Corbett", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Bhimtal", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Ranikhet", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Muketshwar", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    }
+    ],
+    "popularPackages": [{
+      packageName: "Kedarnath", subText: `A luxurious hotel with modern amenities, Radisson Blu is
+      located near the industrial area of Haridwar and offers a comfortable stay.`,stationType:"HillStation" ,"imageUrl": Haridwar2,
+    },
+    {
+      packageName: "Badrinath", subText: `This boutique hotel is situated right on the banks of the Ganges River, offering a
+      serene and picturesque environment. It's a great choice for those seeking a peaceful retreat.`, "imageUrl": Haridwar1,
+    },
+    {
+      packageName: "Yamnotri", subText: `A heritage hotel, The Haveli Hari Ganga offers a blend of traditional
+      architecture and modern comfort. It's conveniently located near the Har Ki Pauri Ghat.`, "imageUrl": Haridwar4,
+    },
+    {
+      packageName: "Gangotari", subText: `This mid-range hotel offers comfortable rooms and is situated close to
+      major attractions like Har Ki Pauri and Mansa Devi Temple.`, "imageUrl": Haridwar3,
+    },
+    {
+      packageName: "Almora", subText: `A budget-friendly option, Hotel Alpana provides basic amenities and is a short
+      walk from Har Ki Pauri.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Dehradun", subText: `This boutique hotel offers comfortable and stylish rooms and is located near the
+      railway station, making it a convenient choice for travelers.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Haridwar", subText: `Another budget-friendly option, Hotel Sun Shine provides clean and
+      comfortable rooms and is located near the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Rishikesh", subText: `Situated near the railway station, Hotel Godwin offers a range of rooms to suit
+      different budgets.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Massorie", subText: `This hotel provides decent accommodation options and is located near Har Ki
+      Pauri and the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Chakarata", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Corbett", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Bhimtal", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Ranikhet", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Muketshwar", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    }
+    ],
+    "religiousPackages": [{
+      packageName: "Haridwar", subText: `A luxurious hotel with modern amenities, Radisson Blu is
+      located near the industrial area of Haridwar and offers a comfortable stay.`,placeType:"HillStation" ,"imageUrl": Haridwar2,
+    },
+    {
+      packageName: "Risikesh",placeType:"religiousPlace", subText: `This boutique hotel is situated right on the banks of the Ganges River, offering a
+      serene and picturesque environment. It's a great choice for those seeking a peaceful retreat.`, "imageUrl": Haridwar1,
+    },
+    {
+      packageName: "Yamnotri",placeType:"religiousPlace", subText: `A heritage hotel, The Haveli Hari Ganga offers a blend of traditional
+      architecture and modern comfort. It's conveniently located near the Har Ki Pauri Ghat.`, "imageUrl": Haridwar4,
+    },
+    {
+      packageName: "Gangotari",placeType:"religiousPlace", subText: `This mid-range hotel offers comfortable rooms and is situated close to
+      major attractions like Har Ki Pauri and Mansa Devi Temple.`, "imageUrl": Haridwar3,
+    },
+    {
+      packageName: "Almora", subText: `A budget-friendly option, Hotel Alpana provides basic amenities and is a short
+      walk from Har Ki Pauri.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Dehradun", subText: `This boutique hotel offers comfortable and stylish rooms and is located near the
+      railway station, making it a convenient choice for travelers.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Haridwar", subText: `Another budget-friendly option, Hotel Sun Shine provides clean and
+      comfortable rooms and is located near the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Rishikesh", subText: `Situated near the railway station, Hotel Godwin offers a range of rooms to suit
+      different budgets.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Massorie", subText: `This hotel provides decent accommodation options and is located near Har Ki
+      Pauri and the Ganges River.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Chakarata", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Corbett", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Bhimtal", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Ranikhet", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    },
+    {
+      packageName: "Muketshwar", subText: `A budget hotel with basic amenities, Hotel King is suitable for travelers looking for
+      affordable options.`, "imageUrl": PkgeImage1,
+    }
+    ],
+  },
 ]
 // const ArrayData=()=>
 // {

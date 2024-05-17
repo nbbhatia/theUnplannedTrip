@@ -12,6 +12,8 @@ import PkgeImage6 from "../../Assets/images/p-5.png";
 import { styled } from '@mui/material/styles';
 import { Grid, Box, Typography, Paper } from "@mui/material";
 import Form from "../Reusable/FormContainer"
+import { useRouter } from "next/router";
+import style from "./style.module.scss";
 const subDestionations = () => {
     let arrayOfSubDestinations = [
         {
@@ -50,6 +52,8 @@ const subDestionations = () => {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
+    let router = useRouter();
+    const { city } = router.query;
     return (
         <Layout style={{ margin: 0 }}>
             <Image
@@ -60,26 +64,27 @@ const subDestionations = () => {
             />
 
             <Grid md={12} sm={12} xs={12} item container style={{ padding: 48, display: "flex", flexWrap: "wrap", width: "100%" }}>
-                <Typography variant="body1" style={{ textAlign: "center" }}>
-                    Rishikesh is town in the Dehradun District of Uttarakhand state in India. Total population of Rishikesh is 75,020 (53% male and 47 % female) as of 2001. Rishikesh is situated at 409 meters above sea level in the foothills of Garhwal Himalayan Range and surrounded by the Shivalik range. Rishikesh is 35 kms far from Haridwar, 90 Kms from Mussoorie, 25 Kms far from Jollygrant airport Dehradun, and 240 kms far from New Delhi.
+                <Typography className={style.heading}>
+                    {city}
                 </Typography>
-                <Typography variant="body1" style={{ textAlign: "center", paddingBottom: 32 }}>
-                    Rishikesh has spectacular view of jungle-clad hills. Rishikesh has also confluence of River Ganges and Chandrabhaga. The glorious attraction of Rishikesh is none other than the great river Ganges herself, running rapidly throughout the city. In the ancient time and still so many yogis, rishis, sages and sannyasis attracted to Rishikesh to practice yoga in this peaceful location. Since then, Rishikesh has known as an abode of sages. Rishikesh is a holy town with so many Ashrams and it is famous for the yoga world wide. Rishikesh is now world famous as a Yoga Capital of the world. Every year during the March month one week long International yoga festival is hosted by Rishikesh.
+                <Typography className={style.subHeading}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </Typography>
+            </Grid>
 
-                <Grid container spacing={2}>
-                    <Grid item xs={8} >
-                        {arrayOfSubDestinations.map((card, index) => (
-                            <Grid item md={12} key={index} style={{ marginBottom: 16 }}>
-                                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} aboutTour={card.aboutTour} />
-                            </Grid>
-                        ))}
-                    </Grid>
-                    <Grid item md={4} >
-                        <Form />
-                    </Grid>
+            <Grid container spacing={2} style={{ padding: 48 }}>
+                <Grid item xs={8} >
+                    {arrayOfSubDestinations.map((card, index) => (
+                        <Grid item md={12} key={index} style={{ marginBottom: 16 }}>
+                            <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} isSubDestinations={true} aboutTour={card.aboutTour} />
+                        </Grid>
+                    ))}
+                </Grid>
+                <Grid item md={4} >
+                    <Form />
                 </Grid>
             </Grid>
+            {/* </Grid> */}
 
         </Layout>
     );

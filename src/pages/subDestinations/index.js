@@ -6,19 +6,21 @@ import style from "./style.module.css";
 import { Grid, Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {data} from "../../items"
+import { data } from "../../items"
 import { useRouter } from "next/router";
+import ButtonContainer from "../Reusable/Button";
+import PopularDestination from "../destinationsPackages/destinations"
 
 const subDestionations = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 4024, min: 1024 },
-      items: 4,
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -30,8 +32,8 @@ const subDestionations = () => {
     },
   };
 
-let router = useRouter();
- const { city } = router.query
+  let router = useRouter();
+  const { city } = router.query
 
   const [destinationsData, setDestinationsData] = useState(null)
 
@@ -70,7 +72,7 @@ let router = useRouter();
           <Carousel showThumbs={false} responsive={responsive}>
             {destinationsData?.attaractions?.map((card, index) => (
               <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-                <PackageCards title={card.packageName} packgImage={card.imageUrl} subText={card.subText}/>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} subText={card.subText} />
               </Grid>
             ))}
           </Carousel>
@@ -86,7 +88,7 @@ let router = useRouter();
           <Carousel showThumbs={false} responsive={responsive}>
             {destinationsData?.temples?.map((card, index) => (
               <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText}/>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText} />
               </Grid>
             ))}
           </Carousel>
@@ -104,10 +106,84 @@ let router = useRouter();
           <Carousel showThumbs={false} responsive={responsive}>
             {destinationsData?.hotels.map((card, index) => (
               <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
-                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText}/>
+                <PackageCards title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText} />
               </Grid>
             ))}
           </Carousel>
+        </Grid>
+      }
+      {destinationsData?.visitPlaces &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
+          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography variant="h6" className={style.subHeading}>
+              Find <span className={style.uniqueText}>
+                Best places
+              </span> to Visit in {destinationsData?.place}
+            </Typography>
+            <ButtonContainer />
+          </Grid>
+
+          <Typography className={style.subText}>
+            {destinationsData?.templeText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.visitPlaces.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards placeType={card.placeType} title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText} />
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>
+      }
+      {destinationsData?.hillStations &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
+          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography variant="h6" className={style.subHeading}>
+              Find <span className={style.uniqueText}>
+                Hill Stations
+              </span> to Visit in {destinationsData?.place}
+            </Typography>
+            <ButtonContainer />
+          </Grid>
+
+          <Typography className={style.subText}>
+            {destinationsData?.hillStationsText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.hillStations.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards placeType={card.placeType} title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText} />
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>
+      }
+      {destinationsData?.religiousPackages &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
+          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography variant="h6" className={style.subHeading}>
+              Find <span className={style.uniqueText}>
+                Religious
+              </span> to Visit in {destinationsData?.place}
+            </Typography>
+            <ButtonContainer />
+          </Grid>
+
+          <Typography className={style.subText}>
+            {destinationsData?.templeText}
+          </Typography>
+          <Carousel showThumbs={false} responsive={responsive}>
+            {destinationsData?.religiousPackages.map((card, index) => (
+              <Grid md={3} xs={6} sm={3} item key={index} style={{ display: "flex", paddingBottom: 32 }}>
+                <PackageCards placeType={card.placeType} title={card.packageName} packgImage={card.imageUrl} price={card.price} subText={card.subText} />
+              </Grid>
+            ))}
+          </Carousel>
+        </Grid>
+      }
+      {destinationsData?.popularPackages &&
+        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
+          <PopularDestination data={destinationsData?.popularPackages} />
         </Grid>
       }
     </Layout>
