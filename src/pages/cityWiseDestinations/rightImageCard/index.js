@@ -20,8 +20,6 @@ export default function MediaControlCard(props) {
     let itemsWithPackage = ['Breakfast', 'Lunch', 'Dinner', 'EveningSnacks and Tea', 'Camping']
     return (
         <Grid md={12} xs={12} sm={12} item container style={{ marginRight: 20 }}>
-
-
             <Card sx={{ display: 'flex', width: "100%", }} >
                 <Box sx={{ display: 'contents', flexDirection: 'column' }} >
                     <Image
@@ -53,7 +51,7 @@ export default function MediaControlCard(props) {
                                     display: "flex",
                                     marginBottom: 8,
                                     alignItems: "center",
-                                    marginRight:12
+                                    marginRight: 12
                                 }}>
                                     <DoneIcon style={{ fontSize: 18, color: "green", marginRight: 3, fontWeight: "bold" }} />
                                     <Typography style={{ color: "#676977" }} className={style.subHeading}>
@@ -64,7 +62,12 @@ export default function MediaControlCard(props) {
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between", margin: "16px 0" }}>
                             <Button variant="contained" className={style.viewDetailbtn} style={{ background: "#0f2454", textDecoration: "none" }}>
-                                <Link href={"/packageDetails"}  style={{ color: "#fff", textDecoration: "none" }}> View Details</Link>
+                                <Link href={{
+                                    pathname: `/packageDetails`,
+                                    query: {
+                                        city: title,
+                                    }
+                                }} style={{ color: "#fff", textDecoration: "none" }}> View Details</Link>
                             </Button>
                         </div>
 

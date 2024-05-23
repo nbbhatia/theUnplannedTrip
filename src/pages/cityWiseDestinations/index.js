@@ -17,26 +17,26 @@ import style from "./style.module.scss";
 const subDestionations = () => {
     let arrayOfSubDestinations = [
         {
-            packageName: "Rishikesh River Rafting",
+            packageName: "11 Days in Uttarakhand",
             aboutTour: `Exciting Rishikesh river rafting & camping package with other fun-filled activities like Zipline, rock climbing, Moonlight trails, evening DJ music party & delicious meals/tempting snack to savor your taste buds.`,
             imageUrl: PkgeImage6, price: 500, NoOfTours: 5
         },
         {
-            packageName: "Rishikesh",
+            packageName: "10 Night and 11 Days in Uttarakhand ",
             aboutTour: `Exciting Rishikesh river rafting & camping package with other fun-filled activities like Zipline, rock climbing, Moonlight trails, evening DJ music party & delicious meals/tempting snack to savor your taste buds.`,
             imageUrl: PkgeImage2,
             price: 500,
             NoOfTours: 7,
         },
         {
-            packageName: "Bungee Jumping Rishikesh",
+            packageName: "4 Days in Kedarnath",
             aboutTour: `Exciting Rishikesh river rafting & camping package with other fun-filled activities like Zipline, rock climbing, Moonlight trails, evening DJ music party & delicious meals/tempting snack to savor your taste buds.`,
             imageUrl: PkgeImage3,
             price: 500,
             NoOfTours: 4,
         },
         {
-            packageName: "Almora",
+            packageName: "2 Night and 3 Days in Rishikesh (Weekend)",
             aboutTour: `Exciting Rishikesh river rafting & camping package with other fun-filled activities like Zipline, rock climbing, Moonlight trails, evening DJ music party & delicious meals/tempting snack to savor your taste buds.`,
             imageUrl: PkgeImage4,
             price: 500,

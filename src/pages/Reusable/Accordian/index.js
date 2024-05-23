@@ -5,6 +5,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import style from "./style.module.scss"
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -53,10 +54,10 @@ const CustomizedAccordions = (props) => {
         <div>
             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary>
-                    <Typography>{title}</Typography>
+                    <Typography className={style.accordianHeading} >{title}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <Typography className={style.accordian_value}>
                        {value}
                     </Typography>
                 </AccordionDetails>

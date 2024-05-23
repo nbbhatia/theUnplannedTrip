@@ -1,0 +1,139 @@
+.heading {
+    color: #0f2454;
+    /* letter-spacing: 10px; */
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Gill Sans';
+    z-index: 1;
+}
+
+.subHeading {
+    color: #2095AE;
+    ;
+    // letter-spacing: 10px;
+    // font-weight: bold;
+    font-size: 24px;
+    font-family: 'Gill Sans';
+}
+
+.parentDiv {
+    display: flex;
+    position: relative;
+}
+
+.bgImageStyle {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.noOfDaysDiv {
+    display: flex;
+    padding-top: 16px;
+}
+
+.alarmsIcon {
+    color: #0f2454;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.noOfDaysText {
+    color: #676977;
+    font-size: 16px;
+    font-family: 'Gill Sans';
+}
+
+.priceDiv {
+    display: flex;
+    padding: 8px 0;
+    align-items: center
+}
+
+.rupeeIcon {
+    color: #0f2454;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 4;
+    font-family: 'Gill Sans';
+}
+
+.priceText {
+    color: #2095AE;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+}
+
+.informationDiv {
+    display: block;
+    padding: 48px 0;
+    align-items: center
+}
+
+.informationText {
+    color: #0f2454;
+    letter-spacing: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+}
+
+.info_body {
+    color: #676977;
+    font-size: 16px;
+    font-weight: 300px;
+    font-family: 'Gill Sans';
+}
+
+.itenaryInfoDiv {
+    border-bottom: 1px solid #676977;
+    padding: 16px 0;
+}
+
+.itenary_infoKey {
+    color: #0f2454;
+    font-size: 16;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+}
+
+.itenaryDiv {
+    display: block;
+    align-items: center;
+    padding: 48px
+}
+
+.itenary_text {
+    color: #0f2454;
+    letter-spacing: 10;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+}
+
+.form_div {
+    background: #f4f5f8;
+    padding: 45px 25px;
+    height: 100%;
+}
+
+.relatedTour_text {
+    color: #0f2454;
+    letter-spacing: 10px;
+    padding: 0 48px;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+    font-size: 24px;
+}
+
+.relatedTour_div {
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.packageCards{
+    display: flex;
+     padding-bottom: 32px 
+}
