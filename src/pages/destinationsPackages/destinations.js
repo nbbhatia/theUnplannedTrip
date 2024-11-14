@@ -26,6 +26,30 @@ const destinations = (props) => {
       gridValue: 6,
       NoOfTours: 7,
     },
+    {
+      packageName: "Gangotri",
+      imageUrl: PkgeImage3,
+      gridValue: 6,
+      NoOfTours: 7,
+    },
+    {
+      packageName: "Yamnotri",
+      imageUrl: PkgeImage4,
+      gridValue: 6,
+      NoOfTours: 7,
+    },
+    {
+      packageName: "Kedarnath",
+      imageUrl: PkgeImage5,
+      gridValue: 6,
+      NoOfTours: 7,
+    },
+    {
+      packageName: "Badrinath",
+      imageUrl: PkgeImage6,
+      gridValue: 6,
+      NoOfTours: 7,
+    },
     // {
     //   packageName: "Kashmir",
     //   imageUrl: PkgeImage3,
@@ -60,7 +84,7 @@ const destinations = (props) => {
     },
     desktop: {
       breakpoint: { max: 4024, min: 1024 },
-      items:props?.data?2:1,
+      items:props?.data?2:3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },

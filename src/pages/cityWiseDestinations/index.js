@@ -14,6 +14,7 @@ import { Grid, Box, Typography, Paper } from "@mui/material";
 import Form from "../Reusable/FormContainer"
 import { useRouter } from "next/router";
 import style from "./style.module.scss";
+
 const subDestionations = () => {
     let arrayOfSubDestinations = [
         {
@@ -56,23 +57,24 @@ const subDestionations = () => {
     const { city } = router.query;
     return (
         <Layout style={{ margin: 0 }}>
-            <Image
+            {/* <Image
                 src={BGImage}
                 alt="Vercel Logo"
                 style={{ height: "80vh", width: "100%", objectFit: "cover" }}
                 priority
-            />
+            /> */}
 
-            <Grid md={12} sm={12} xs={12} item container style={{ padding: 48, display: "flex", flexWrap: "wrap", width: "100%" }}>
+            <Grid md={12} sm={12} xs={12} item container style={{ padding: '0 48px', display: "flex", flexWrap: "wrap", width: "100%" }}>
                 <Typography className={style.heading}>
-                    {city}
+                    {/* {city} */}
+                    IteniaryDetails
                 </Typography>
-                <Typography className={style.subHeading}>
+                {/* <Typography className={style.subHeading}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </Typography>
+                </Typography> */}
             </Grid>
 
-            <Grid container spacing={2} style={{ padding: 48 }}>
+            <Grid container spacing={2} style={{ padding: "16px 0 0 48px " }}>
                 <Grid item xs={8} >
                     {arrayOfSubDestinations.map((card, index) => (
                         <Grid item md={12} key={index} style={{ marginBottom: 16 }}>

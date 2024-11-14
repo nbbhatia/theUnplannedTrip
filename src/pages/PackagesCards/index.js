@@ -13,9 +13,9 @@ export default function BasicCard(props) {
 
   return (
     <Box style={{ width: "100%" }}>
-      <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0, height: 300 }}>
+      <Card sx={{ mr: 2 }} style={{ padding: 0, boxShadow: "none", gap: 0, minHeight: 350 }}>
         <Link href={{
-          pathname: `/cityWiseDestinations`,
+          pathname: `/subDestinations`,
           query: {
             city: title,
           }
@@ -27,14 +27,15 @@ export default function BasicCard(props) {
             className={style.gradientImage}
             style={{ height: !isDestinationCard ? 200 : 330, width: "100%", borderRadius: "7px 7px 0 0", objectFit: "cover" }}
           />
-          {/* <T
-          ypography level="title-lg" className={style.stationTypeStyle} >{placeType}</Typography> */}
-
-
         </Link>
         {isDestinationCard &&
           <div style={{ paddingLeft: 20, position: "absolute", bottom: 10 }}>
-            <Link href="/cityWiseDestinations" className="href-link">
+            <Link href={{
+              pathname: `/subDestinations`,
+              query: {
+                city: title,
+              }
+            }} className="href-link">
               <Typography level="title-lg" className={style.hotelName}>{title}</Typography>
             </Link>
 
@@ -45,7 +46,12 @@ export default function BasicCard(props) {
         }
         {!isDestinationCard &&
           <div style={{ padding: 8 }}>
-            <Link href="/cityWiseDestinations" className="href-link">
+            <Link href={{
+              pathname: `/subDestinations`,
+              query: {
+                city: title,
+              }
+            }} className="href-link">
               <Typography level="title-lg" className={style.hotelName} >{title}</Typography>
 
             </Link>

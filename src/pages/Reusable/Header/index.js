@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from "next/image";
 import { color_styling } from "../../../Assets/color";
-import Logo from "../../../Assets/images/logo.jpeg";
+import Logo from "../../../Assets/images/newLogo2.jpg";
 import Container from "@mui/material/Container";
 import "./header.css";
 

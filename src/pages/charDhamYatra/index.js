@@ -21,31 +21,31 @@ export const CharDhamYatra = () => {
             {
                 id: 1,
                 title:
-                    "CharDham Yatra",
+                    "CharDham",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quos mollitia sed quod consectetur at quam dolore praesentium neque eos assumenda iusto nam laborum laboriosam odio blanditiis possimus accusantium recusandae porro exercitationem itaque",
                 imageUrl: ChardhamImage,
             },
             {
                 id: 2,
-                title: "Gangotri Temple",
+                title: "Gangotri",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quos mollitia sed quod consectetur at quam dolore praesentium neque eos assumenda iusto nam laborum laboriosam odio blanditiis possimus accusantium recusandae porro exercitationem itaque",
                 imageUrl: Gangotri,
             },
             {
                 id: 3,
-                title: "Yamnotri Temple",
+                title: "Yamnotri",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quos mollitia sed quod consectetur at quam dolore praesentium neque eos assumenda iusto nam laborum laboriosam odio blanditiis possimus accusantium recusandae porro exercitationem itaque",
                 imageUrl: Yamnotri,
             },
             {
                 id: 4,
-                title: "Kedarnath Temple",
+                title: "Kedarnath",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quos mollitia sed quod consectetur at quam dolore praesentium neque eos assumenda iusto nam laborum laboriosam odio blanditiis possimus accusantium recusandae porro exercitationem itaque",
                 imageUrl: Kedarnath,
             },
             {
                 id: 5,
-                title: "Badrinath Temple",
+                title: "Badrinath",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quos mollitia sed quod consectetur at quam dolore praesentium neque eos assumenda iusto nam laborum laboriosam odio blanditiis possimus accusantium recusandae porro exercitationem itaque",
                 imageUrl: Badrinath,
             },
@@ -76,7 +76,7 @@ export const CharDhamYatra = () => {
                                 height: "780px",
                                 alignItems: "center",
                                 display: "flex",
-                                position:"relative"
+                                position: "relative"
                             }}
                         >
                             <Image
@@ -116,7 +116,12 @@ export const CharDhamYatra = () => {
                                         className={style.viewPackageText}
                                         sx={{ ml: "auto", alignSelf: "center", fontWeight: 600, background: "#2095AE", margin: "24px 0" }}
                                     >
-                                        <Link href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</Link>
+                                        <Link href={{
+                                            pathname: `/subDestinations`,
+                                            query: {
+                                                city: item.title,
+                                            }
+                                        }} style={{ color: "#fff", textDecoration: "none" }}> View Packages</Link>
                                         {/* <a href={"/cityWiseDestinations"} style={{ color: "#fff", textDecoration: "none" }}> View Packages</a> */}
                                     </Button>
                                 </div>
