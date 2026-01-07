@@ -1,336 +1,127 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../page";
 import Image from "next/image";
-import PackageCards from "../PackagesCards";
 import style from "./style.module.css";
-
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, Container, Chip, Rating } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { data } from "../../items";
 import { useRouter } from "next/router";
-import ButtonContainer from "../Reusable/Button";
-import PopularDestination from "../destinationsPackages/destinations";
-import IteniaryDetails from "../cityWiseDestinations";
-import AccordianComponent from "../Reusable/Accordian"
-const subDestionations = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 4024, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
+import AccordianComponent from "../Reusable/Accordian";
+
+const SubDestinations = () => {
+  const router = useRouter();
+  const { city } = router.query;
+  const [destData, setDestData] = useState(null);
+
+  const attractionResponsive = {
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 2.5 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 1.5 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
   };
 
-  let router = useRouter();
-  const { city } = router.query;
-
-  const [destinationsData, setDestinationsData] = useState(null);
-
   useEffect(() => {
-    data
-      .filter((item) => item.place === city)
-      .map((dataObj) => setDestinationsData(dataObj)); // [ 2, 4, 6 ]
+    if (city) {
+      const found = data.find((item) => item.place.toLowerCase() === city.toLowerCase());
+      setDestData(found);
+    }
   }, [city]);
 
+  if (!destData) return null;
+
   return (
-    <Layout style={{ margin: 0 }}>
-      <Image
-        src={destinationsData?.bannerImage}
-        alt="Vercel Logo"
-        style={{ height: "80vh", width: "100%", objectFit: "cover" }}
-        priority
-      />
-
-      <Grid
-        md={12}
-        sm={12}
-        xs={12}
-        item
-        style={{
-          padding: "0 24px",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <div>
-          <Typography variant="h6" className={style.subHeading}>
-            {destinationsData?.place}
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.text}
-          </Typography>
+    <Layout>
+      {/* 1. HERO SECTION - Massive Heading */}
+      <div className={style.heroContainer}>
+        <Image src={destData.bannerImage} alt={destData.place} layout="fill" objectFit="cover" priority />
+        <div className={style.heroOverlay}>
+          <Typography variant="h1" className={style.heroTitle}>{destData.place}</Typography>
+          <Typography className={style.heroSubtitle}>Explore the soul of Uttarakhand</Typography>
         </div>
-      </Grid>
-      {destinationsData?.historyContent && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-          <Typography variant="body1" className={style.body1}>
-            History of {destinationsData?.place}
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.historyContent}
-          </Typography>
-        </Grid>
-      )}
-       {destinationsData?.thingsToDo && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-          <Typography variant="h6" className={style.body1}>
-            Things to Do In Chopta
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.thingsToDoText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.thingsToDo?.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  subText={card.subText}
-                />
-              </Grid>
-            ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.attaractions && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-          <Typography variant="h6" className={style.subHeading}>
-            Attaractions
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.attaractionsText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.attaractions?.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  subText={card.subText}
-                />
-              </Grid>
-            ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.temples && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-          <Typography variant="h6" className={style.subHeading}>
-            Temples
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.templeText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.temples?.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  price={card.price}
-                  subText={card.subText}
-                />
-              </Grid>
-            ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.hotels && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-          <Typography variant="h6" className={style.subHeading}>
-            Find <span className={style.uniqueText}>Best places</span> to stay
-            in Haridwar
-          </Typography>
-          <Typography className={style.subText}>
-            {destinationsData?.templeText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.hotels.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  price={card.price}
-                  subText={card.subText}
-                />
-              </Grid>
-            ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.visitPlaces && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
-          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6" className={style.subHeading}>
-              Find <span className={style.uniqueText}>Best places</span> to
-              Visit in {destinationsData?.place}
+      </div>
+
+      <Container maxWidth="xl">
+        {/* DESCRIPTION TEXT SECTION */}
+        <Box className={style.mainDescriptionSection}>
+            <Typography variant="h2" className={style.bigHeading}>
+                About <span className={style.uniqueText}>{destData.place}</span>
             </Typography>
-            <ButtonContainer />
-          </Grid>
+            <Typography className={style.descriptionContent}>
+                {destData.text}
+            </Typography>
+        </Box>
 
-          <Typography className={style.subText}>
-            {destinationsData?.templeText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.visitPlaces.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  placeType={card.placeType}
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  price={card.price}
-                  subText={card.subText}
-                />
-              </Grid>
+        {/* 2. THINGS TO DO - BENTO GRID with Dark Overlays */}
+        <Box className={style.sectionSpacing}>
+          <div className={style.textCenter}>
+            <Typography variant="h2" className={style.bigHeading}>Things to <span className={style.uniqueText}>Experience</span></Typography>
+            <Typography className={style.subSectionDescription}>{destData.thingsToDoText}</Typography>
+          </div>
+          
+          <div className={style.bentoGrid}>
+            {destData.thingsToDo?.map((item, index) => (
+              <div key={index} className={`${style.bentoItem} ${index === 0 ? style.largeBento : ""}`}>
+                <Image src={item.imageUrl} alt={item.packageName} layout="fill" objectFit="cover" />
+                <div className={style.imageOverlayGradient}></div> {/* Visibility Overlay */}
+                <div className={style.bentoContent}>
+                  <Typography variant="h4" className={style.cardTitle}>{item.packageName}</Typography>
+                  <Typography variant="body1" className={style.cardBodyText}>{item.subText}</Typography>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Box>
+
+        {/* 3. TOP ATTRACTIONS - Glass Cards with High Contrast */}
+        <Box className={style.sectionSpacing}>
+          <Typography variant="h2" className={style.bigHeading}>Must-Visit <span className={style.uniqueText}>Spots</span></Typography>
+          <Typography className={style.subSectionDescription} sx={{ mb: 4 }}>{destData.attaractionsText}</Typography>
+          
+          <Carousel responsive={attractionResponsive} infinite itemClass={style.sliderPadding}>
+            {destData.attaractions?.map((item, i) => (
+              <div key={i} className={style.attractionCard}>
+                <Image src={item.imageUrl} alt={item.packageName} layout="fill" objectFit="cover" />
+                <div className={style.imageOverlayGradient}></div> {/* Visibility Overlay */}
+                <div className={style.attractionGlass}>
+                  <Typography variant="h4" fontWeight="bold">{item.packageName}</Typography>
+                  <Typography variant="body1" sx={{ mt: 1 }}>{item.subText}</Typography>
+                </div>
+              </div>
             ))}
           </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.hillStations && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
-          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6" className={style.subHeading}>
-              Find <span className={style.uniqueText}>Hill Stations</span> to
-              Visit in {destinationsData?.place}
-            </Typography>
-            <ButtonContainer />
-          </Grid>
+        </Box>
 
-          <Typography className={style.subText}>
-            {destinationsData?.hillStationsText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.hillStations.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  placeType={card.placeType}
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  price={card.price}
-                  subText={card.subText}
-                />
+        {/* 4. HOTELS - Luxury Grid */}
+        <Box className={style.sectionSpacing}>
+          <Typography variant="h2" className={style.bigHeading} align="center">Premier <span className={style.uniqueText}>Hotels</span></Typography>
+          <Grid container spacing={4} sx={{ mt: 4 }}>
+            {destData.hotels?.map((hotel, i) => (
+              <Grid item xs={12} md={6} key={i}>
+                <div className={style.hotelCard}>
+                  <div className={style.hotelImageContainer}>
+                    <Image src={hotel.imageUrl || "/hotel-placeholder.jpg"} alt={hotel.name} layout="fill" objectFit="cover" />
+                    <div className={style.imageOverlaySmall}></div>
+                    <Chip label={hotel.type || "Luxury"} className={style.hotelChip} />
+                  </div>
+                  <div className={style.hotelDetails}>
+                    <div>
+                        <Rating value={5} readOnly size="small" />
+                        <Typography variant="h4" className={style.hotelName}>{hotel.name || hotel.packageName}</Typography>
+                        <Typography variant="body2" className={style.hotelText}>{hotel.detail}</Typography>
+                    </div>
+                    <div className={style.hotelPriceRow}>
+                      <Typography variant="h5" className={style.uniqueText}>₹4,500 <small>/ night</small></Typography>
+                      <button className={style.bookBtn}>Check Availability</button>
+                    </div>
+                  </div>
+                </div>
               </Grid>
             ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.religiousPackages && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
-          <Grid style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography variant="h6" className={style.subHeading}>
-              Find <span className={style.uniqueText}>Religious</span> to Visit
-              in {destinationsData?.place}
-            </Typography>
-            <ButtonContainer />
           </Grid>
-
-          <Typography className={style.subText}>
-            {destinationsData?.templeText}
-          </Typography>
-          <Carousel showThumbs={false} responsive={responsive}>
-            {destinationsData?.religiousPackages.map((card, index) => (
-              <Grid
-                md={3}
-                xs={6}
-                sm={3}
-                item
-                key={index}
-                style={{ display: "flex", paddingBottom: 32 }}
-              >
-                <PackageCards
-                  placeType={card.placeType}
-                  title={card.packageName}
-                  packgImage={card.imageUrl}
-                  price={card.price}
-                  subText={card.subText}
-                />
-              </Grid>
-            ))}
-          </Carousel>
-        </Grid>
-      )}
-      {destinationsData?.popularPackages && (
-        <Grid md={12} xs={12} sm={12} item style={{ padding: "48px" }}>
-          <PopularDestination data={destinationsData?.popularPackages} />
-        </Grid>
-      )}
-      <Grid md={12} xs={12} sm={12} item style={{ padding: "0 24px" }}>
-            <Typography variant="h6" className={style.subHeading}>
-              {destinationsData?.place} Geography & Climate
-            </Typography>
-            <div style={{ marginTop: 24 }}>
-              {destinationsData?.geographyClimate?.map((geographyClimateValue, index) =>
-              (
-                <Box sx={{md:6,xs:12,sm:6}}>
-                <AccordianComponent 
-                  title={geographyClimateValue.key} 
-                  value={geographyClimateValue?.value} 
-               />
-                </Box>
-              ))}
-
-            </div>
-
-          </Grid>
-      <IteniaryDetails/>
+        </Box>
+      </Container>
     </Layout>
   );
 };
 
-export default subDestionations;
+export default SubDestinations;

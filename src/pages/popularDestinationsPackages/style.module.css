@@ -1,0 +1,56 @@
+.carouselContainer {
+  padding: 10px 0;
+}
+
+.destinationCard {
+  position: relative;
+  height: 320px;
+  /* Decreased height for a sleeker look */
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2), box-shadow 0.3s ease;
+  border: none !important;
+}
+
+.destinationCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.zoomImage {
+  transition: transform 0.8s ease !important;
+}
+
+.destinationCard:hover .zoomImage {
+  transform: scale(1.1);
+}
+
+/* Glassmorphism Overlay - Adjusted for smaller height */
+.glassOverlay {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 50%);
+  z-index: 1;
+}

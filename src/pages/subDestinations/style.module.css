@@ -1,41 +1,157 @@
-.heading {
+/* MASSIVE HEADINGS */
+.bigHeading {
+    font-size: 64px !important;
+    font-weight: 800 !important;
     color: #0f2454;
-    letter-spacing: 10;
-    font-size: 52px;
-    font-weight: bold;
-    font-family: 'Gill Sans';
-    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    margin-bottom: 20px !important;
+    letter-spacing: -1px;
 }
 
-.subText{
-    color:#0f2454;
+.heroTitle {
+    font-size: 110px !important;
+    /* Huge Size */
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+    font-size: 24px !important;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* OVERLAY FOR TEXT VISIBILITY */
+.imageOverlayGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.imageOverlaySmall {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* DESCRIPTION TEXT */
+.mainDescriptionSection {
+    padding: 80px 0 40px 0;
+    max-width: 900px;
+}
+
+.descriptionContent {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #444;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.subSectionDescription {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+}
+
+/* BENTO CONTENT Z-INDEX */
+.bentoContent {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    z-index: 2;
+    /* Sits above overlay */
+    color: white;
+}
+
+.cardTitle {
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+.cardBodyText {
+    opacity: 0.8;
     font-size: 16px;
-    font-family: 'Gill Sans';
-    /* padding:24px; */
-    /* text-align: center; */
 }
 
-.subHeading{
-    color:#0f2454;
-    font-size: 32px;
-    font-family: 'Gill Sans';
-    padding-bottom:24px;
-    /* letter-spacing: 6px; */
-    /* text-align: center; */
-    font-weight: bold;
+/* ATTRACTION GLASS FIX */
+.attractionGlass {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    z-index: 2;
 }
-.body1 {
+
+/* HOTEL CARD FIX */
+.hotelName {
+    font-weight: 700 !important;
     color: #0f2454;
-    font-size: 24px;
-    font-family: 'Gill Sans';
-    padding-bottom: 8px;
-    /* letter-spacing: 6px; */
-    /* text-align: center; */
-    font-weight: bold;
+    margin-top: 10px !important;
 }
 
-.uniqueText {
-    color: #2095AE;
-    font-weight: "bold";
-    font-family: 'Gill Sans';
+.hotelText {
+    margin-top: 10px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* REST OF LAYOUT */
+.heroContainer {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    gap: 24px;
+}
+
+.bentoItem {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.largeBento {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.attractionCard {
+    position: relative;
+    height: 500px;
+    margin: 15px;
+    border-radius: 40px;
+    overflow: hidden;
 }

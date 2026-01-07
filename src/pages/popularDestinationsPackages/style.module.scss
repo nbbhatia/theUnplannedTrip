@@ -1,0 +1,77 @@
+.destinationImage_div {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+
+    &:hover {
+        .destination_image {
+            transform: scale(1.1);
+        }
+
+        .image_overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Lightens slightly on hover */
+        }
+    }
+
+    .image_overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Dark tint */
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .destination_image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .image_text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        z-index: 2;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+/* Header styles are separate local classes */
+.heading {
+    color: #2095AE;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.subHeading {
+    color: #0f2454;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.uniqueText {
+    color: #2095AE;
+}
+
+.destinationName {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'Gill Sans', sans-serif;
+    margin: 0;
+}

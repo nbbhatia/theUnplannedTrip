@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from 'next/link'
 import Image from "next/image";
 import { color_styling } from "../../../Assets/color";
-import Logo from "../../../Assets/images/newLogo2.jpg";
+import Logo from "../../../Assets/images/logo.jpg";
 import Container from "@mui/material/Container";
 import "./header.css";
 
@@ -15,11 +15,11 @@ const Home = () => {
   let linksArray = [
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
-    { title: "Tours", url: "/subDestinations" },
-    { title: "Destinations", url: "/destinationsPackages" },
-    { title: "Blog", url: "/" },
-    { title: "Contact", url: "/" },
-    { title: "Gallery", url: "/" },
+    // { title: "Tours", url: "/subDestinations" },
+    { title: "Destinations", url: "/allPackagesList" },
+    // { title: "Blog", url: "/" },
+    // ns{ title: "Contact", url: "/" },
+    // { title: "Gallery", url: "/" },
   ];
   const handleScroll = () => {
     const position = window.scrollY;

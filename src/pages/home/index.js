@@ -1,36 +1,27 @@
-import React from 'react'
+import React from "react";
 import MostPopularPackages from "../Hotels";
 import WhyChooseUs from "../WhyChooseUs";
-// import CenterAcheivements from "../CenterAchivements";
-// import ExplorePackages from "../ExploreDestinations";
-import DestinationsPackages from "../destinationsPackages/destinations";
+import PopularDestinationsPackages from "../popularDestinationsPackages/popularDestinations";
 import RightImagContentSection from "../Reusable/RightImagContentSection";
-import VideoBanner from '../Reusable/VideoBanner';
+import ThemeSelection from "../themes"
+import VideoBanner from "../Reusable/VideoBanner";
+import RecomendPackages from "../Hero"
 import "./index.css";
-import CharDhamYatra from '../charDhamYatra';
+import CharDhamYatra from "../charDhamYatra";
 
 const Home = () => {
+  return (
+    <div>
+      <VideoBanner />
+      <ThemeSelection />
+      <PopularDestinationsPackages />
+      <RecomendPackages />
+      <MostPopularPackages />
+      <WhyChooseUs />
+      <CharDhamYatra />
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <VideoBanner />
-            <RightImagContentSection />
-            <DestinationsPackages />
-            <MostPopularPackages />
-            <WhyChooseUs />
-            <CharDhamYatra/>
+export default Home;
 
-            {/* <UkVideo/> */}
-            {/* <CenterAcheivements /> */}
-            {/* <ExplorePackages/>
-       <MostPopularPackages />
-      <WhyChooseUs /> */}
-            {/* <TourPackagesList /> */}
-
-            {/* <WhyTour />
-      <BestPackages /> */}
-        </div>
-    )
-}
-
-export default Home
